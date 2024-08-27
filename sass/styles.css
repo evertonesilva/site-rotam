@@ -61,11 +61,6 @@ li {
   background-position: top;
 }
 @media (max-width: 700px) {
-  #main-banner {
-    height: 100vh;
-  }
-}
-@media (max-width: 700px) {
   #main-banner nav {
     width: 100%;
   }
