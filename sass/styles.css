@@ -339,7 +339,7 @@ li {
 }
 @media (max-width: 700px) {
   .local-data {
-    max-height: 100vh;
+    max-height: 100dvh;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -426,6 +426,21 @@ li {
   .local-data .local .local-data-container-1 .center {
     text-align: center;
     width: 100%;
+  }
+}
+.local-data .local .material-symbols-outlined {
+  display: none;
+  font-size: 3rem;
+  color: #FFF;
+  background-color: #181920;
+  border: 1px solid #181920;
+  border-radius: 5px;
+}
+@media (max-width: 700px) {
+  .local-data .local .material-symbols-outlined {
+    margin: 0;
+    margin-top: -3.5rem;
+    display: flex;
   }
 }
 
