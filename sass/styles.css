@@ -97,26 +97,17 @@ li {
 #main-banner .nav-container-navbar li a:hover {
   color: #ff5200;
 }
-#main-banner .title-container {
-  color: #FFF;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+#main-banner .fa-bars {
+  display: none;
 }
 @media (max-width: 700px) {
-  #main-banner .title-container {
-    text-align: center;
-    padding: 2rem;
+  #main-banner .fa-bars {
+    display: inline;
   }
-}
-#main-banner .title-container h2 {
-  font-size: 3rem;
 }
 
 #main-banner-objetivo {
-  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../img/1.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../img/1.jpg");
   background-attachment: fixed;
   height: 100vh;
   background-size: 100% 100%;
@@ -171,12 +162,12 @@ li {
 }
 #main-banner-objetivo .objetivo-container .objetivo-foto {
   background: url(../img/objetivo1.png);
-  width: 65vw;
+  width: 60vw;
   height: 90vh;
   background-size: contain;
   background-repeat: no-repeat;
   margin: 3rem;
-  margin-left: -13rem;
+  margin-left: -25rem;
 }
 #main-banner-objetivo .objetivo-container .objetivo-container-texto {
   margin: 3rem;
@@ -187,10 +178,12 @@ li {
   border-radius: 5px;
 }
 #main-banner-objetivo .objetivo-container .objetivo-container-texto p {
-  width: 70%;
+  width: 65%;
   margin: 3rem;
+  color: #000;
   font-size: 1.5rem;
   text-align: justify;
+  margin-left: 0;
 }
 
 .services-container {
@@ -210,6 +203,8 @@ li {
     align-items: center;
     flex-direction: column;
     background-size: cover;
+    padding: 0;
+    height: 900px;
   }
 }
 .services-container h2 {
@@ -218,7 +213,7 @@ li {
 }
 @media (max-width: 700px) {
   .services-container h2 {
-    margin-top: 0;
+    margin-bottom: 3rem;
   }
 }
 .services-container .services-card-container {
@@ -231,6 +226,9 @@ li {
   .services-container .services-card-container {
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
   }
 }
 .services-container .sobre-evento {
@@ -244,7 +242,8 @@ li {
   .services-container .sobre-evento {
     background-size: cover;
     width: 50vw;
-    height: 25vh;
+    height: 30vh;
+    margin-bottom: 4rem;
   }
 }
 .services-container .services-card {
@@ -255,12 +254,16 @@ li {
 }
 @media (max-width: 700px) {
   .services-container .services-card {
-    width: 100%;
+    width: 90%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 .services-container .services-card h3 {
   font-size: 2rem;
-  width: 330px;
+  width: 350px;
   text-align: center;
   border-radius: 5px;
   background-color: #FFF;
@@ -300,6 +303,8 @@ li {
     flex-direction: column;
     align-items: center;
     padding: 2rem;
+    margin: 0;
+    padding: 0;
   }
 }
 .local-data h2 {
@@ -317,12 +322,13 @@ li {
     height: 100vh;
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 }
 .local-data .local .local-foto {
   background: url(../img/local-foto.jpg);
   width: 65vw;
-  height: 65vh;
+  height: 70vh;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -342,6 +348,7 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 90%;
   }
 }
 @media (max-width: 700px) {
@@ -349,6 +356,7 @@ li {
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 100%;
   }
 }
 .local-data .local .local-data-container-1 h3 {
@@ -365,7 +373,7 @@ li {
 }
 @media (max-width: 700px) {
   .local-data .local .local-data-container-1 p {
-    width: 350px;
+    width: 100%;
   }
 }
 .local-data .local .local-data-container-1 .center {
@@ -374,6 +382,7 @@ li {
 @media (max-width: 700px) {
   .local-data .local .local-data-container-1 .center {
     text-align: center;
+    width: 100%;
   }
 }
 
