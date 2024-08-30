@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Águia Piloto</title>
+    <!--AOS Link-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--CSS do Projeto-->
     <link rel="stylesheet" href="sass/styles.css">
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <!--Cabeçalho-->
@@ -40,39 +42,31 @@
             </nav>
             <i class="fas fa-bars" onclick="clickMenu()"></i>
         </div>
-<!--
-        <div class="title-container">
-            <h2>Competição</h2>
-            <h1>Águia Piloto</h1>
-            <a href="#" class="btn btn-primary btn-rounded">Faça sua inscrição</a>
-        </div>
-    -->        
     </header>
     <!--Sobre o evento-->
     <main id="sobreevento" class="services-container">
         <h2>Sobre o Evento</h2>
         <div class="services-card-container">
-            <div class="sobre-evento"></div>
-            <div class="services-card">
+            <div class="sobre-evento" data-aos="fade-up"></div>
+            <div class="services-card" data-aos="fade-down">
                 <h3>Aguia Piloto 2024</h3>
                 <p>Competição esportiva entre motociclistas profissionais das forças de segurança pública e instituições convidadas, como Exército Brasileiro, Bombeiro Militar, SAMU, Agentes de Trânsito, e Guarda Municipal </p>
             </div>
     </main>
+    <div class="demonstracao">
+        <video src="video/demonstracao.mp4" type="mp4" width="300" height="500" controls></video>
+    </div>
     <!--Loca do evento-->
     <div id="local" class="local-data">
         <h2>Local e Data</h2>
         <div class="local">
-            <div class="local-foto"></div>
+            <div class="local-foto" data-aos="fade-up"></div>
             <div class="local-data-container">
-                <div class="local-data-container-1">
+                <div class="local-data-container-1" data-aos="fade-down">
                     <h3>Local</h3>
                     <p>A cidade de Campina Grande - PB será a sede da competição, que ocorrerá no Parque do Povo, palco do "Maior São João do Mundo", um dos cartões postais da Paraíba</p>
-                </div>
-                <div class="local-data-container-1">
                     <h3>Data</h3>
                     <p class="center">01 de Novembro de 2024 (sexta-feira)</p>
-                </div>
-                <div class="local-data-container-1">
                     <h3>Horário</h3>
                     <p class="center">15h às 23h</p>
                 </div>

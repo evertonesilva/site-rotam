@@ -149,6 +149,91 @@
 
 // FIM Objetivo
 
+//CSS da pagina de Atividades
+#main-banner-atividades
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('../img/1.jpg')
+    background-attachment: fixed
+    height: 100vh
+    background-size: 100% 100%
+    background-position: top
+    @include mobile
+        background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('../img/1-2.png')
+        height: 100vh
+        background-size: 100% 100%
+        background-position: center
+
+    nav
+    @include mobile
+        display: none
+        width: 100%
+
+    .nav-container
+        display: flex
+        justify-content: right
+        align-content: flex-start
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        padding: 0.4rem 2rem
+        background-color: transparent
+        z-index: 10
+        @include mobile
+            padding: 1rem
+
+    .nav-container-navbar
+        display: flex
+        align-items: center
+        justify-content: space-between
+        height: 100%
+
+        li
+            margin: 5px 10px
+
+            a
+                color: $light-color
+                @include main-hover
+
+    .atividade-texto
+        text-align: left
+        padding-top: 6rem
+        padding-left: 6rem 
+    .atividade-foto
+        display: flex
+        flex-direction: row
+        justify-content: flex-end
+        margin-top: 0
+        padding: 0
+
+        .atividade-foto-1
+            display: flex
+            background: url(../img/atividade-1.png)
+            width: 17vw
+            height: 40vh
+            background-size: contain
+            background-repeat: no-repeat
+            margin: -2rem            
+
+        .atividade-foto-2
+            display: flex
+            background: url(../img/atividade-2.png)
+            width: 17vw
+            height: 40vh
+            background-size: contain
+            background-repeat: no-repeat
+            margin: -2rem
+    .atividade-container
+        display: flex
+        flex-direction: column
+        
+        .atividade-container-texto
+            display: flex
+            flex-direction: row
+
+
+
+//Fim do CSS da pagina de Atividades
+
 .services-container
     background: linear-gradient(rgba(0,0,0,0.6 ), rgba(0,0,0,0.6)), url('../img/eagle.jpg')
     height: 100vh
@@ -237,7 +322,15 @@
             padding-top: 2rem
             @include mobile
                 width: 100%
+            
+.demonstracao
 
+    width: 100vw
+    height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 1.5rem
 
 
 .local-data
@@ -327,7 +420,9 @@
                     width: 100%
 
         .material-symbols-outlined
-            display: none
+            display: flex
+            flex-direction: column
+            align-items: left
             font-size: 3rem
             color: $light-color
             background-color: $dark-color
