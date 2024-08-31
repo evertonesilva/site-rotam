@@ -259,7 +259,7 @@
         @extend %section-title
         border-radius: 5px
         @include mobile
-            margin-bottom: 3rem
+            margin-bottom: 1.5rem
             
 
     .services-card-container
@@ -278,13 +278,13 @@
     .sobre-evento
         background: url(../img/sobre-evento.png)
         width: 20vw
-        height: 70vh
+        height: 80vh
         background-size: contain
         background-repeat: no-repeat
         @include mobile
             background-size: cover
-            width: 50vw
-            height: 30vh
+            width: 70vw
+            height: 50vh
             margin-bottom: 4rem
 
     .services-card
@@ -311,7 +311,7 @@
             text-shadow: 1px 1px 3px $dark-color
             margin-bottom: 1rem
             @include mobile
-                font-size: 1.5rem
+                font-size: 1.7rem
                 width: 300px
 
         p
@@ -324,13 +324,19 @@
                 width: 100%
             
 .demonstracao
-
-    width: 100vw
     height: 100vh
+    background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6 )), url(../img/1.jpg)
+    background-size: 100% 100%
+    background-repeat: no-repeat
     display: flex
     flex-direction: column
     align-items: center
-    padding: 1.5rem
+    justify-content: center
+    margin: 0 auto
+    @include mobile
+        background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6 )), url(../img/1-2.png)
+        background-size: 100% 100%
+        background-repeat: no-repeat
 
 
 .local-data
@@ -352,7 +358,7 @@
     h2
         width: 200px
         @extend %section-title
-        margin-bottom: 1.5rem
+        margin: 1.2rem
         border-radius: 5px
     
     .local
@@ -374,8 +380,8 @@
             background-repeat: no-repeat
             @include mobile
                 background-size: cover
-                width: 50vw
-                height: 25vh
+                width: 60vw
+                height: 35vh
 
 
         .local-data-container
@@ -401,7 +407,7 @@
                 margin: 1rem
                 border-radius: 5px
                 @include mobile
-
+                    margin-bottom: 0.5rem
 
 
         
@@ -413,6 +419,7 @@
                 color: $black
                 @include mobile
                   width: 100%
+                  font-size: 1.3rem
             .center 
                 text-align: justify
                 @include mobile
@@ -420,6 +427,7 @@
                     width: 100%
 
         .material-symbols-outlined
+            width: 50px
             display: flex
             flex-direction: column
             align-items: left
@@ -427,10 +435,10 @@
             color: $light-color
             background-color: $dark-color
             border: 1px solid $dark-color
-            border-radius: 5px
+            border-radius: 10px
+            margin-left: 2rem
             @include mobile
                 margin: 0
-                margin-top: -3.5rem
                 display: flex
 
 
@@ -495,3 +503,37 @@ footer
             text-align: center
         p
             margin-bottom: 0.5rem
+
+.registration
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: fixed
+    bottom: .8rem
+    left: .8rem
+    z-index: 99
+        
+    .material-symbols-outlined
+        font-size: 2.5rem
+        background: $primary-color
+        border: 1px solid $primary-color
+        border-radius: 10px
+        color: $light-color
+        transition: transform .4s 
+        &:hover
+            transform: scale(1.2)
+            background: $light-color
+            color: $primary-color
+    p
+        text-align: center
+        background: $primary-color
+        color: $light-color
+        border-radius: 4px
+        border: 1px solid $primary-color
+        font-size: .9rem
+        font-weight: bold
+        transition: transform .4s 
+        &:hover
+            transform: scale(1.1)
+            background: $light-color
+            color: $primary-color
