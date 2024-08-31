@@ -9,7 +9,7 @@
     background-position: center
     max-height: 600px
     @include mobile
-        max-height: 100vh
+        max-height: 100dvh
         background: url('../img/1-2.png')
         background-size: 100% 100%
         background-position: center 
@@ -243,7 +243,7 @@
     padding: 2rem
     max-height: 600px
     @include mobile
-        max-height: 100vh
+        max-height: 100dvh
         background: linear-gradient(rgba(0,0,0,0.6 ), rgba(0,0,0,0.6)), url('../img/eagle-2.png')
         background-attachment: fixed
         background-position: center
@@ -334,6 +334,7 @@
     justify-content: center
     margin: 0 auto
     @include mobile
+        height: 100dvh
         background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6 )), url(../img/1-2.png)
         background-size: 100% 100%
         background-repeat: no-repeat
@@ -407,7 +408,7 @@
                 margin: 1rem
                 border-radius: 5px
                 @include mobile
-                    margin-bottom: 0.5rem
+                    margin-bottom: 0
 
 
         
@@ -420,6 +421,7 @@
                 @include mobile
                   width: 100%
                   font-size: 1.3rem
+                  margin-top: .5rem 
             .center 
                 text-align: justify
                 @include mobile
@@ -432,9 +434,9 @@
             flex-direction: column
             align-items: left
             font-size: 3rem
-            color: $light-color
-            background-color: $dark-color
-            border: 1px solid $dark-color
+            color: red
+            background-color: $light-color
+            border: 1px solid $light-color
             border-radius: 10px
             margin-left: 2rem
             @include mobile

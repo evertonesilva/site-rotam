@@ -59,7 +59,7 @@ li {
 }
 @media (max-width: 700px) {
   #main-banner {
-    max-height: 100vh;
+    max-height: 100dvh;
     background: url("../img/1-2.png");
     background-size: 100% 100%;
     background-position: center;
@@ -328,7 +328,7 @@ li {
 }
 @media (max-width: 700px) {
   .services-container {
-    max-height: 100vh;
+    max-height: 100dvh;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/eagle-2.png");
     background-attachment: fixed;
     background-position: center;
@@ -436,6 +436,7 @@ li {
 }
 @media (max-width: 700px) {
   .demonstracao {
+    height: 100dvh;
     background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/1-2.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -521,7 +522,7 @@ li {
 }
 @media (max-width: 700px) {
   .local-data .local .local-data-container-1 h3 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 }
 .local-data .local .local-data-container-1 p {
@@ -535,6 +536,7 @@ li {
   .local-data .local .local-data-container-1 p {
     width: 100%;
     font-size: 1.3rem;
+    margin-top: 0.5rem;
   }
 }
 .local-data .local .local-data-container-1 .center {
@@ -552,9 +554,9 @@ li {
   flex-direction: column;
   align-items: left;
   font-size: 3rem;
-  color: #FFF;
-  background-color: #181920;
-  border: 1px solid #181920;
+  color: red;
+  background-color: #FFF;
+  border: 1px solid #FFF;
   border-radius: 10px;
   margin-left: 2rem;
 }
