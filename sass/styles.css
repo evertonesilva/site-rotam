@@ -200,6 +200,7 @@ li {
     align-items: center;
     width: 100%;
     margin: 0;
+    margin-top: 4rem;
   }
 }
 #main-banner-objetivo .objetivo-container .objetivo-container-texto h2 {
@@ -240,7 +241,7 @@ li {
   }
 }
 @media (max-width: 700px) {
-  #main-banner-atividades {
+  #main-banner-atividades nav {
     display: none;
     width: 100%;
   }
@@ -325,6 +326,7 @@ li {
   text-align: left;
   padding: 2rem;
   max-height: 600px;
+  z-index: 99;
 }
 @media (max-width: 700px) {
   .services-container {
@@ -428,6 +430,7 @@ li {
   background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/1.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -527,10 +530,11 @@ li {
 }
 .local-data .local .local-data-container-1 p {
   width: 70%;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: justify;
   margin: 1rem;
   color: #000;
+  font-weight: bold;
 }
 @media (max-width: 700px) {
   .local-data .local .local-data-container-1 p {
@@ -567,10 +571,48 @@ li {
   }
 }
 
+.galery {
+  background-color: #181920;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.galery .galery-container {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.galery .galery-container img {
+  width: 10%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.684);
+  transition: 0.5s;
+}
+@media (max-width: 700px) {
+  .galery .galery-container img {
+    width: 5%;
+  }
+}
+.galery .galery-container img:hover {
+  width: 25%;
+}
+@media (max-width: 700px) {
+  .galery .galery-container img:hover {
+    width: 50%;
+  }
+}
+
 footer {
   background-color: #1d1d1d;
   color: #8b8e94;
   padding: 3rem 2rem;
+  z-index: 1;
 }
 footer .footer-container {
   max-width: 1200px;
@@ -655,7 +697,7 @@ footer .footer-copy-right-container p {
   position: fixed;
   bottom: 0.8rem;
   left: 0.8rem;
-  z-index: 99;
+  z-index: 0;
 }
 .registration .material-symbols-outlined {
   font-size: 2.5rem;
