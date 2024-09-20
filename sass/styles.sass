@@ -198,7 +198,13 @@
     .atividade-texto
         text-align: left
         padding-top: 6rem
-        padding-left: 6rem 
+        padding-left: 6rem
+
+        h2
+            @extend %section-title
+            width: 200px
+            border-radius: 5px
+
     .atividade-foto
         display: flex
         flex-direction: row
@@ -213,7 +219,9 @@
             height: 40vh
             background-size: contain
             background-repeat: no-repeat
-            margin: -2rem            
+            margin-top: -5rem
+            margin-right: 1rem
+            margin-bottom: 2rem            
 
         .atividade-foto-2
             display: flex
@@ -222,14 +230,34 @@
             height: 40vh
             background-size: contain
             background-repeat: no-repeat
-            margin: -2rem
+            margin-top: -5rem
+            margin-bottom: 2rem
+
     .atividade-container
         display: flex
-        flex-direction: column
-        
+        flex-direction: row
+        justify-content: center
+
         .atividade-container-texto
-            display: flex
-            flex-direction: row
+            width: 30%
+            margin: 1rem
+
+            h3
+                @extend %section-title
+                width: 200px
+
+            #equipamentos
+                width: 350px
+            
+            #convivio
+                width: 250px
+
+            p
+                font-size: 1.3rem
+                margin-top: 1rem
+                font-weight: bold
+        
+
 
 
 

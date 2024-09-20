@@ -13,7 +13,7 @@ li {
   list-style: none;
 }
 
-.local-data .local .local-data-container-1 h3, .local-data h2, .services-container h2, #main-banner-objetivo .objetivo-container .objetivo-container-texto h2 {
+.local-data .local .local-data-container-1 h3, .local-data h2, .services-container h2, #main-banner-atividades .atividade-container .atividade-container-texto h3, #main-banner-atividades .atividade-texto h2, #main-banner-objetivo .objetivo-container .objetivo-container-texto h2 {
   font-size: 1.2rem;
   background-color: #181920;
   margin-top: 2rem;
@@ -284,6 +284,10 @@ li {
   padding-top: 6rem;
   padding-left: 6rem;
 }
+#main-banner-atividades .atividade-texto h2 {
+  width: 200px;
+  border-radius: 5px;
+}
 #main-banner-atividades .atividade-foto {
   display: flex;
   flex-direction: row;
@@ -298,7 +302,9 @@ li {
   height: 40vh;
   background-size: contain;
   background-repeat: no-repeat;
-  margin: -2rem;
+  margin-top: -5rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
 }
 #main-banner-atividades .atividade-foto .atividade-foto-2 {
   display: flex;
@@ -307,15 +313,31 @@ li {
   height: 40vh;
   background-size: contain;
   background-repeat: no-repeat;
-  margin: -2rem;
+  margin-top: -5rem;
+  margin-bottom: 2rem;
 }
 #main-banner-atividades .atividade-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
 }
 #main-banner-atividades .atividade-container .atividade-container-texto {
-  display: flex;
-  flex-direction: row;
+  width: 30%;
+  margin: 1rem;
+}
+#main-banner-atividades .atividade-container .atividade-container-texto h3 {
+  width: 200px;
+}
+#main-banner-atividades .atividade-container .atividade-container-texto #equipamentos {
+  width: 350px;
+}
+#main-banner-atividades .atividade-container .atividade-container-texto #convivio {
+  width: 250px;
+}
+#main-banner-atividades .atividade-container .atividade-container-texto p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  font-weight: bold;
 }
 
 .services-container {
