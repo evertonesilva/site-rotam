@@ -13,7 +13,7 @@ li {
   list-style: none;
 }
 
-.local-data .local .local-data-container-1 h3, .local-data h2, .services-container h2, #main-banner-atividades .atividade-container .atividade-container-texto h3, #main-banner-atividades .atividade-texto h2, #main-banner-objetivo .objetivo-container .objetivo-container-texto h2 {
+.local-data .local .local-data-container-1 h3, .local-data h2, .services-container h2, .atividade .atividade-container-texto h3, .atividade .atividade-texto h2, .objetivo-container-texto h2 {
   font-size: 1.2rem;
   background-color: #181920;
   margin-top: 2rem;
@@ -68,7 +68,6 @@ li {
 @media (max-width: 700px) {
   #main-banner nav {
     width: 100%;
-    display: none;
   }
 }
 #main-banner .nav-container {
@@ -80,13 +79,12 @@ li {
   left: 0;
   width: 100%;
   padding: 0.4rem 2rem;
-  background-color: transparent;
   z-index: 10;
 }
 #main-banner .nav-container-navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   height: 100%;
 }
 #main-banner .nav-container-navbar li {
@@ -108,71 +106,22 @@ li {
   }
 }
 
-#main-banner-objetivo {
-  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../img/1.jpg");
-  background-attachment: fixed;
-  height: 100vh;
-  background-size: 100% 100%;
-  background-position: top;
-}
-@media (max-width: 700px) {
-  #main-banner-objetivo {
-    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../img/1-2.png");
-    height: 100vh;
-    background-size: 100% 100%;
-    background-position: center;
-  }
-}
-@media (max-width: 700px) {
-  #main-banner-objetivo nav {
-    display: none;
-    width: 100%;
-  }
-}
-#main-banner-objetivo .nav-container {
-  display: flex;
-  justify-content: right;
-  align-content: flex-start;
+.objetivo-container {
+  background-color: rgba(255, 255, 255, 0.6);
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  padding: 0.4rem 2rem;
-  background-color: transparent;
-  z-index: 10;
-}
-@media (max-width: 700px) {
-  #main-banner-objetivo .nav-container {
-    padding: 1rem;
-  }
-}
-#main-banner-objetivo .nav-container-navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-}
-#main-banner-objetivo .nav-container-navbar li {
-  margin: 5px 10px;
-}
-#main-banner-objetivo .nav-container-navbar li a {
-  color: #FFF;
-  transition: 0.3s;
-}
-#main-banner-objetivo .nav-container-navbar li a:hover {
-  color: #ff5200;
-}
-#main-banner-objetivo .objetivo-container {
   display: flex;
 }
 @media (max-width: 700px) {
-  #main-banner-objetivo .objetivo-container {
+  .objetivo-container {
     flex-direction: column;
     align-items: center;
     padding: 0;
   }
 }
-#main-banner-objetivo .objetivo-container .objetivo-foto {
+
+.objetivo-foto {
   background: url(../img/objetivo1.png);
   width: 60vw;
   height: 90vh;
@@ -182,19 +131,20 @@ li {
   margin-left: -25rem;
 }
 @media (max-width: 700px) {
-  #main-banner-objetivo .objetivo-container .objetivo-foto {
+  .objetivo-foto {
     width: 60vw;
     height: 30vh;
     background-size: cover;
     margin-left: 0;
   }
 }
-#main-banner-objetivo .objetivo-container .objetivo-container-texto {
+
+.objetivo-container-texto {
   margin: 3rem;
   margin-top: 5rem;
 }
 @media (max-width: 700px) {
-  #main-banner-objetivo .objetivo-container .objetivo-container-texto {
+  .objetivo-container-texto {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -203,12 +153,12 @@ li {
     margin-top: 4rem;
   }
 }
-#main-banner-objetivo .objetivo-container .objetivo-container-texto h2 {
+.objetivo-container-texto h2 {
   margin-top: 4rem;
   width: 200px;
   border-radius: 5px;
 }
-#main-banner-objetivo .objetivo-container .objetivo-container-texto p {
+.objetivo-container-texto p {
   width: 65%;
   margin: 3rem;
   color: #000;
@@ -218,85 +168,53 @@ li {
   margin-left: 0;
 }
 @media (max-width: 700px) {
-  #main-banner-objetivo .objetivo-container .objetivo-container-texto p {
+  .objetivo-container-texto p {
     width: 80%;
     margin: 1rem;
     font-size: 1.3rem;
   }
 }
 
-#main-banner-atividades {
-  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../img/1.jpg");
-  background-attachment: fixed;
-  height: 650px;
-  background-size: 100% 100%;
-  background-position: top;
-}
-@media (max-width: 700px) {
-  #main-banner-atividades {
-    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../img/1-2.png");
-    height: 100vh;
-    background-size: 100% 100%;
-    background-position: center;
-  }
-}
-@media (max-width: 700px) {
-  #main-banner-atividades nav {
-    display: none;
-    width: 100%;
-  }
-}
-#main-banner-atividades .nav-container {
-  display: flex;
-  justify-content: right;
-  align-content: flex-start;
+.atividade {
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  padding: 0.4rem 2rem;
-  background-color: transparent;
-  z-index: 10;
+  background: rgba(255, 255, 255, 0.6);
 }
-@media (max-width: 700px) {
-  #main-banner-atividades .nav-container {
-    padding: 1rem;
-  }
-}
-#main-banner-atividades .nav-container-navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-}
-#main-banner-atividades .nav-container-navbar li {
-  margin: 5px 10px;
-}
-#main-banner-atividades .nav-container-navbar li a {
-  color: #FFF;
-  transition: 0.3s;
-}
-#main-banner-atividades .nav-container-navbar li a:hover {
-  color: #ff5200;
-}
-#main-banner-atividades .atividade-texto {
+.atividade .atividade-texto {
   text-align: left;
   padding-top: 6rem;
   padding-left: 2rem;
   margin-top: -5rem;
 }
-#main-banner-atividades .atividade-texto h2 {
+@media (max-width: 700px) {
+  .atividade .atividade-texto {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-left: 0;
+  }
+}
+.atividade .atividade-texto h2 {
   width: 200px;
   border-radius: 5px;
 }
-#main-banner-atividades .atividade-foto {
+.atividade .atividade-foto {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   margin-top: 0;
   padding: 0;
 }
-#main-banner-atividades .atividade-foto .atividade-foto-1 {
+@media (max-width: 700px) {
+  .atividade .atividade-foto {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.atividade .atividade-foto .atividade-foto-1 {
   display: flex;
   background: url(../img/atividade-1.png);
   width: 17vw;
@@ -307,7 +225,16 @@ li {
   margin-right: 1rem;
   margin-bottom: 2rem;
 }
-#main-banner-atividades .atividade-foto .atividade-foto-2 {
+@media (max-width: 700px) {
+  .atividade .atividade-foto .atividade-foto-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 25vw;
+    height: 12vh;
+    margin-right: 0.5rem;
+  }
+}
+.atividade .atividade-foto .atividade-foto-2 {
   display: flex;
   background: url(../img/atividade-2.png);
   width: 17vw;
@@ -317,28 +244,50 @@ li {
   margin-top: -2rem;
   margin-bottom: 2rem;
 }
-#main-banner-atividades .atividade-container {
+@media (max-width: 700px) {
+  .atividade .atividade-foto .atividade-foto-2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 25vw;
+    height: 12vh;
+  }
+}
+.atividade .atividade-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: -4rem;
 }
-#main-banner-atividades .atividade-container .atividade-container-texto {
+@media (max-width: 700px) {
+  .atividade .atividade-container {
+    flex-direction: column;
+    margin-top: -1rem;
+  }
+}
+.atividade .atividade-container-texto {
   width: 30%;
   margin: 1rem;
 }
-#main-banner-atividades .atividade-container .atividade-container-texto h3 {
+@media (max-width: 700px) {
+  .atividade .atividade-container-texto {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.atividade .atividade-container-texto h3 {
   width: 200px;
   border-radius: 5px;
   font-size: 1.1rem;
 }
-#main-banner-atividades .atividade-container .atividade-container-texto #equipamentos {
+.atividade .atividade-container-texto #equipamentos {
   width: 350px;
 }
-#main-banner-atividades .atividade-container .atividade-container-texto #convivio {
+.atividade .atividade-container-texto #convivio {
   width: 250px;
 }
-#main-banner-atividades .atividade-container .atividade-container-texto p {
+.atividade .atividade-container-texto p {
   font-size: 1.1rem;
   margin-top: 1rem;
   font-weight: bold;
@@ -652,6 +601,7 @@ footer .footer-container {
   footer .footer-container {
     max-width: 100%;
     flex-direction: column;
+    align-items: center;
   }
 }
 footer .footer-container .footer-title {

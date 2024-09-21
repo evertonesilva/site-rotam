@@ -17,7 +17,6 @@
     nav
         @include mobile
             width: 100%
-            display: none
 
     .nav-container
         display: flex
@@ -28,7 +27,6 @@
         left: 0
         width: 100%
         padding: 0.4rem 2rem
-        background-color: transparent
         z-index: 10
         @include mobile
             
@@ -36,7 +34,7 @@
     .nav-container-navbar
         display: flex
         align-items: center
-        justify-content: space-between
+        justify-content: flex-end 
         height: 100%
 
         li
@@ -53,153 +51,78 @@
 
 
 //CSS pagina Objetivo
-#main-banner-objetivo
-    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('../img/1.jpg')
-    background-attachment: fixed
-    height: 100vh
-    background-size: 100% 100%
-    background-position: top
+.objetivo-container
+    background-color: rgba(255,255,255, 0.6 )
+    position: fixed
+    top: 0
+    left: 0
+    display: flex
     @include mobile
-        background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('../img/1-2.png')
-        height: 100vh
-        background-size: 100% 100%
-        background-position: center 
-
-    nav
-        @include mobile
-            display: none
-            width: 100%
-
-    .nav-container
-        display: flex
-        justify-content: right
-        align-content: flex-start
-        position: fixed
-        top: 0
-        left: 0
-        width: 100%
-        padding: 0.4rem 2rem
-        background-color: transparent
-        z-index: 10
-        @include mobile
-            padding: 1rem
-
-    .nav-container-navbar
-        display: flex
+        flex-direction: column
         align-items: center
-        justify-content: space-between
-        height: 100%
+        padding: 0
 
-        li
-            margin: 5px 10px
+.objetivo-foto
+    background: url(../img/objetivo1.png)
+    width: 60vw
+    height: 90vh
+    background-size: contain
+    background-repeat: no-repeat
+    margin: 3rem
+    margin-left: -25rem
+    @include mobile
+        width: 60vw
+        height: 30vh
+        background-size: cover
+        margin-left: 0
 
-            a
-                color: $light-color
-                @include main-hover
-
-    .objetivo-container
+.objetivo-container-texto
+    margin: 3rem
+    margin-top: 5rem
+    @include mobile
         display: flex
+        flex-direction: column
+        align-items: center
+        width: 100%
+        margin: 0
+        margin-top: 4rem
+
+    h2
+        margin-top: 4rem
+        width: 200px
+        @extend %section-title
+        border-radius: 5px
+    
+    p
+        width: 65%
+        margin: 3rem
+        color: $black
+        font-size: 1.5rem
+        font-weight: bold  
+        text-align: justify
+        margin-left: 0
         @include mobile
-            flex-direction: column
-            align-items: center
-            padding: 0
-
-        .objetivo-foto
-            background: url(../img/objetivo1.png)
-            width: 60vw
-            height: 90vh
-            background-size: contain
-            background-repeat: no-repeat
-            margin: 3rem
-            margin-left: -25rem
-            @include mobile
-                width: 60vw
-                height: 30vh
-                background-size: cover
-                margin-left: 0
-        
-        .objetivo-container-texto
-            margin: 3rem
-            margin-top: 5rem
-            @include mobile
-                display: flex
-                flex-direction: column
-                align-items: center
-                width: 100%
-                margin: 0
-                margin-top: 4rem
-
-            h2
-                margin-top: 4rem
-                width: 200px
-                @extend %section-title
-                border-radius: 5px
-            
-            p
-                width: 65%
-                margin: 3rem
-                color: $black
-                font-size: 1.5rem
-                font-weight: bold  
-                text-align: justify
-                margin-left: 0
-                @include mobile
-                    width: 80%
-                    margin: 1rem
-                    font-size: 1.3rem
-
-// FIM Objetivo
+            width: 80%
+            margin: 1rem
+            font-size: 1.3rem
 
 //CSS da pagina de Atividades
-#main-banner-atividades
-    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('../img/1.jpg')
-    background-attachment: fixed
-    height: 650px
-    background-size: 100% 100%
-    background-position: top
-    @include mobile
-        background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('../img/1-2.png')
-        height: 100vh
-        background-size: 100% 100%
-        background-position: center
-
-    nav
-        @include mobile
-            display: none
-            width: 100%
-
-    .nav-container
-        display: flex
-        justify-content: right
-        align-content: flex-start
-        position: fixed
-        top: 0
-        left: 0
-        width: 100%
-        padding: 0.4rem 2rem
-        background-color: transparent
-        z-index: 10
-        @include mobile
-            padding: 1rem
-
-    .nav-container-navbar
-        display: flex
-        align-items: center
-        justify-content: space-between
-        height: 100%
-
-        li
-            margin: 5px 10px
-
-            a
-                color: $light-color
-                @include main-hover
-
+.atividade
+    height: 100vh
+    position: fixed
+    top: 0
+    left: 0
+    background: rgba(255,255,255,0.6 )
     .atividade-texto
         text-align: left
         padding-top: 6rem
         padding-left: 2rem
         margin-top: -5rem
+        @include mobile
+            display: flex
+            justify-content: center
+            text-align: center
+            padding-left: 0
 
         h2
             @extend %section-title
@@ -212,6 +135,10 @@
         justify-content: flex-end
         margin-top: 0
         padding: 0
+        @include mobile
+            flex-direction: row
+            align-items: center
+            justify-content: center
 
         .atividade-foto-1
             display: flex
@@ -222,7 +149,15 @@
             background-repeat: no-repeat
             margin-top: -2rem
             margin-right: 1rem
-            margin-bottom: 2rem            
+            margin-bottom: 2rem
+            @include mobile
+                margin-top: 1rem
+                margin-bottom: 1rem
+                width: 25vw
+                height: 12vh
+                margin-right: .5rem
+
+
 
         .atividade-foto-2
             display: flex
@@ -233,35 +168,48 @@
             background-repeat: no-repeat
             margin-top: -2rem
             margin-bottom: 2rem
+            @include mobile
+                margin-top: 1rem
+                margin-bottom: 1rem
+                width: 25vw
+                height: 12vh
 
     .atividade-container
         display: flex
         flex-direction: row
         justify-content: center
-        margin-top: -4rem 
+        margin-top: -4rem
+        @include mobile
+            flex-direction: column
+            margin-top: -1rem
 
-        .atividade-container-texto
-            width: 30%
-            margin: 1rem
+    .atividade-container-texto
+        width: 30%
+        margin: 1rem
+        @include mobile
+            width: 90%
+            display: flex
+            flex-direction: column
+            align-items: center
 
-            h3
-                @extend %section-title
-                width: 200px
-                border-radius: 5px
-                font-size: 1.1rem
+        h3
+            @extend %section-title
+            width: 200px
+            border-radius: 5px
+            font-size: 1.1rem
 
-            #equipamentos
-                width: 350px
-            
-            #convivio
-                width: 250px
-
-            p
-                font-size: 1.1rem
-                margin-top: 1rem
-                font-weight: bold
-                text-align: justify
+        #equipamentos
+            width: 350px
         
+        #convivio
+            width: 250px
+
+        p
+            font-size: 1.1rem
+            margin-top: 1rem
+            font-weight: bold
+            text-align: justify
+
 
 
 
@@ -524,6 +472,7 @@ footer
         @include mobile
             max-width: 100%
             flex-direction: column
+            align-items: center
 
         .footer-title
             color: #FFF
