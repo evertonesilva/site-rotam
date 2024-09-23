@@ -25,29 +25,14 @@ li {
 }
 
 .btn {
-  padding: 0.4rem 0.7rem;
-  margin-top: 2rem;
+  padding: 0.7rem;
   display: inline;
-  border: 1px solid #FFF;
-  border-radius: 5px;
-  transition: 0.3s;
+  transition: 0.4s;
+}
+.btn:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.4);
   color: #FFF;
-}
-.btn:hover {
-  border-color: #ff5200;
-  color: #ff5200;
-}
-.btn-primary {
-  background-color: #ff5200;
-  border-color: #ff5200;
-}
-.btn:hover {
-  background-color: transparent;
-}
-.btn-rounded {
-  margin-top: 2rem;
-  border-radius: 2rem;
-  padding: 1rem 1.5rem;
 }
 
 #main-banner {
@@ -72,30 +57,33 @@ li {
 }
 #main-banner .nav-container {
   display: flex;
-  justify-content: right;
-  align-content: flex-start;
+  justify-content: center;
+  align-content: center;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  padding: 0.4rem 2rem;
+  right: 15px;
   z-index: 10;
 }
 #main-banner .nav-container-navbar {
   display: flex;
+  background: rgba(255, 255, 255, 0.6);
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   height: 100%;
-}
-#main-banner .nav-container-navbar li {
-  margin: 5px 10px;
+  width: 100%;
+  margin: 0.7rem 0.7rem;
 }
 #main-banner .nav-container-navbar li a {
-  color: #FFF;
-  transition: 0.3s;
+  color: #181920;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.4s;
 }
 #main-banner .nav-container-navbar li a:hover {
   color: #ff5200;
+}
+#main-banner .nav-container-navbar li a:hover {
+  color: #FFF;
 }
 #main-banner .fa-bars {
   display: none;
@@ -133,7 +121,7 @@ li {
 }
 @media (max-width: 700px) {
   .objetivo-foto {
-    width: 60vw;
+    width: 50vw;
     height: 30vh;
     background-size: cover;
     margin-left: 0;
@@ -160,6 +148,12 @@ li {
   width: 200px;
   border-radius: 5px;
 }
+@media (max-width: 700px) {
+  .objetivo-container-texto h2 {
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+}
 .objetivo-container-texto p {
   width: 65%;
   margin: 3rem;
@@ -171,9 +165,9 @@ li {
 }
 @media (max-width: 700px) {
   .objetivo-container-texto p {
-    width: 80%;
+    width: 90%;
     margin: 1rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 }
 
@@ -201,6 +195,12 @@ li {
 .atividade .atividade-texto h2 {
   width: 200px;
   border-radius: 5px;
+}
+@media (max-width: 700px) {
+  .atividade .atividade-texto h2 {
+    margin-top: 3rem;
+    font-size: 1rem;
+  }
 }
 .atividade .atividade-foto {
   display: flex;
@@ -263,7 +263,7 @@ li {
 @media (max-width: 700px) {
   .atividade .atividade-container {
     flex-direction: column;
-    margin-top: -1rem;
+    margin-top: -3rem;
   }
 }
 .atividade .atividade-container-texto {
@@ -283,17 +283,37 @@ li {
   border-radius: 5px;
   font-size: 1.1rem;
 }
+@media (max-width: 700px) {
+  .atividade .atividade-container-texto h3 {
+    font-size: 1rem;
+  }
+}
 .atividade .atividade-container-texto #equipamentos {
   width: 350px;
 }
+@media (max-width: 700px) {
+  .atividade .atividade-container-texto #equipamentos {
+    margin-top: -1rem;
+  }
+}
 .atividade .atividade-container-texto #convivio {
   width: 250px;
+}
+@media (max-width: 700px) {
+  .atividade .atividade-container-texto #convivio {
+    margin-top: -1rem;
+  }
 }
 .atividade .atividade-container-texto p {
   font-size: 1.1rem;
   margin-top: 1rem;
   font-weight: bold;
   text-align: justify;
+}
+@media (max-width: 700px) {
+  .atividade .atividade-container-texto p {
+    font-size: 0.8rem;
+  }
 }
 
 .services-container {
@@ -354,9 +374,9 @@ li {
 @media (max-width: 700px) {
   .services-container .sobre-evento {
     background-size: cover;
-    width: 70vw;
-    height: 50vh;
-    margin-bottom: 4rem;
+    width: 60vw;
+    height: 40vh;
+    margin-bottom: 2rem;
   }
 }
 .services-container .services-card {
@@ -386,8 +406,9 @@ li {
 }
 @media (max-width: 700px) {
   .services-container .services-card h3 {
-    font-size: 1.7rem;
-    width: 300px;
+    font-size: 1.2rem;
+    width: 220px;
+    margin-bottom: 0;
   }
 }
 .services-container .services-card p {
@@ -400,6 +421,8 @@ li {
 @media (max-width: 700px) {
   .services-container .services-card p {
     width: 100%;
+    padding-top: 1rem;
+    font-size: 1rem;
   }
 }
 
@@ -448,6 +471,11 @@ li {
   margin: 1.2rem;
   border-radius: 5px;
 }
+@media (max-width: 700px) {
+  .local-data h2 {
+    font-size: 1rem;
+  }
+}
 .local-data .local {
   max-height: 100%;
   display: flex;
@@ -472,7 +500,7 @@ li {
 @media (max-width: 700px) {
   .local-data .local .local-foto {
     background-size: cover;
-    width: 60vw;
+    width: 50vw;
     height: 35vh;
   }
 }
@@ -503,6 +531,7 @@ li {
 }
 @media (max-width: 700px) {
   .local-data .local .local-data-container-1 h3 {
+    font-size: 1rem;
     margin-bottom: 0;
   }
 }
@@ -517,7 +546,7 @@ li {
 @media (max-width: 700px) {
   .local-data .local .local-data-container-1 p {
     width: 100%;
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin-top: 0.5rem;
   }
 }
@@ -591,7 +620,7 @@ footer .footer-container p {
 }
 footer .footer-image {
   background: url(../img/footer.png);
-  width: 70px;
+  width: 55px;
   height: 70px;
   background-size: contain;
   background-repeat: no-repeat;
