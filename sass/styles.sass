@@ -45,10 +45,12 @@
                 color: $dark-color
                 font-weight: bold
                 text-transform: uppercase
-                @include main-hover
+
 
                 &:hover
                     color: $light-color
+                    border-bottom: 2px solid #fff
+                    background: rgba(255,255,255, 0.3 )
 
     .fa-bars
         display: none
@@ -457,6 +459,23 @@ footer
     padding: 3rem 2rem
     z-index: 1
 
+    .wrap
+        display: flex
+        flex-direction: row
+
+        .realizacao-card
+            display: flex
+            flex-direction: columns
+            align-items: center
+            gap: 20px
+            padding: 2rem
+
+            img
+                width: 200px
+                
+    #seds-card
+        width: 100px
+        height: 40px
 
     .footer-container
         max-width: 1200px

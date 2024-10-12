@@ -77,13 +77,11 @@ li {
   color: #181920;
   font-weight: bold;
   text-transform: uppercase;
-  transition: 0.4s;
-}
-#main-banner .nav-container-navbar li a:hover {
-  color: #ff5200;
 }
 #main-banner .nav-container-navbar li a:hover {
   color: #FFF;
+  border-bottom: 2px solid #fff;
+  background: rgba(255, 255, 255, 0.3);
 }
 #main-banner .fa-bars {
   display: none;
@@ -583,6 +581,24 @@ footer {
   color: #8b8e94;
   padding: 3rem 2rem;
   z-index: 1;
+}
+footer .wrap {
+  display: flex;
+  flex-direction: row;
+}
+footer .wrap .realizacao-card {
+  display: flex;
+  flex-direction: columns;
+  align-items: center;
+  gap: 20px;
+  padding: 2rem;
+}
+footer .wrap .realizacao-card img {
+  width: 200px;
+}
+footer #seds-card {
+  width: 100px;
+  height: 40px;
 }
 footer .footer-container {
   max-width: 1200px;
