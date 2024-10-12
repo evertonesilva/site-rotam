@@ -24,17 +24,6 @@ li {
   color: #FFF;
 }
 
-.btn {
-  padding: 0.7rem;
-  display: inline;
-  transition: 0.4s;
-}
-.btn:hover {
-  border-color: rgba(255, 255, 255, 0.4);
-  background-color: rgba(255, 255, 255, 0.4);
-  color: #FFF;
-}
-
 #main-banner {
   background: url("../img/1.jpg");
   height: 100dvh;
@@ -60,28 +49,27 @@ li {
   justify-content: center;
   align-content: center;
   position: fixed;
-  top: 0;
+  top: 20px;
   right: 15px;
   z-index: 10;
 }
 #main-banner .nav-container-navbar {
   display: flex;
-  background: rgba(255, 255, 255, 0.6);
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 100%;
-  margin: 0.7rem 0.7rem;
 }
 #main-banner .nav-container-navbar li a {
+  background: rgba(255, 255, 255, 0.6);
   color: #181920;
   font-weight: bold;
+  padding: 10px 20px;
   text-transform: uppercase;
+  transition: 0.3s ease;
 }
 #main-banner .nav-container-navbar li a:hover {
-  color: #FFF;
+  color: #000;
   border-bottom: 2px solid #fff;
-  background: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 #main-banner .fa-bars {
   display: none;
@@ -341,10 +329,12 @@ li {
 .services-container h2 {
   width: 200px;
   border-radius: 5px;
+  margin-top: -1rem;
 }
 @media (max-width: 700px) {
   .services-container h2 {
-    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 }
 .services-container .services-card-container {
@@ -382,9 +372,11 @@ li {
   height: 70vh;
   margin: 1%;
   padding: 3rem;
+  margin-top: -5rem;
 }
 @media (max-width: 700px) {
   .services-container .services-card {
+    margin-top: 0;
     width: 90%;
     padding: 0;
     display: flex;
@@ -420,7 +412,7 @@ li {
   .services-container .services-card p {
     width: 100%;
     padding-top: 1rem;
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 }
 
@@ -584,7 +576,12 @@ footer {
 }
 footer .wrap {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+@media (max-width: 700px) {
+  footer .wrap {
+    flex-direction: column;
+  }
 }
 footer .wrap .realizacao-card {
   display: flex;
@@ -592,6 +589,11 @@ footer .wrap .realizacao-card {
   align-items: center;
   gap: 20px;
   padding: 2rem;
+}
+@media (max-width: 700px) {
+  footer .wrap .realizacao-card {
+    flex-direction: column;
+  }
 }
 footer .wrap .realizacao-card img {
   width: 200px;

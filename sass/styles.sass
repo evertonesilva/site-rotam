@@ -23,7 +23,7 @@
         justify-content: center
         align-content: center
         position: fixed
-        top: 0
+        top: 20px
         right: 15px
         z-index: 10
         @include mobile
@@ -31,26 +31,25 @@
 
     .nav-container-navbar
         display: flex
-        background: rgba(255,255,255, 0.6 )
         align-items: center
-        justify-content: center 
-        height: 100%
-        width: 100%
-        margin: 0.7rem 0.7rem
+        justify-content: center
+
 
         li
-            
 
             a
+                background: rgba(255,255,255, 0.6 )
                 color: $dark-color
                 font-weight: bold
+                padding: 10px 20px
                 text-transform: uppercase
-
-
+                transition: 0.3s ease              
                 &:hover
-                    color: $light-color
+                    color: $black
                     border-bottom: 2px solid #fff
-                    background: rgba(255,255,255, 0.3 )
+                    background-color: rgba(255,255,255, 0.3 )
+
+
 
     .fa-bars
         display: none
@@ -260,8 +259,10 @@
         width: 200px
         @extend %section-title
         border-radius: 5px
+        margin-top: -1rem
         @include mobile
-            margin-bottom: 1.5rem
+            margin-top: 0.5rem
+            margin-bottom: 0.5rem
             
 
     .services-card-container
@@ -294,7 +295,9 @@
         height: 70vh
         margin: 1%
         padding: 3rem
+        margin-top: -5rem
         @include mobile
+            margin-top: 0
             width: 90%
             padding: 0
             display: flex
@@ -326,7 +329,7 @@
             @include mobile
                 width: 100%
                 padding-top: 1rem
-                font-size: 1rem
+                font-size: 0.95rem
             
 .demonstracao
     height: 100vh
@@ -461,7 +464,9 @@ footer
 
     .wrap
         display: flex
-        flex-direction: row
+        flex-direction: column
+        @include mobile
+            flex-direction: column
 
         .realizacao-card
             display: flex
@@ -469,6 +474,8 @@ footer
             align-items: center
             gap: 20px
             padding: 2rem
+            @include mobile
+                flex-direction: column
 
             img
                 width: 200px
