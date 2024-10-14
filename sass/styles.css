@@ -103,20 +103,21 @@ li {
   background-size: contain;
   background-repeat: no-repeat;
   margin: 3rem;
-  margin-left: -25rem;
+  margin-left: -15rem;
 }
 @media (max-width: 700px) {
   .objetivo-foto {
-    width: 50vw;
-    height: 30vh;
-    background-size: cover;
-    margin-left: 0;
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    margin-left: auto;
+    margin-top: 1rem;
   }
 }
 
 .objetivo-container-texto {
   margin: 3rem;
-  margin-top: 5rem;
+  margin-top: 1.2rem;
   margin-bottom: 2rem;
 }
 @media (max-width: 700px) {
@@ -136,15 +137,15 @@ li {
 }
 @media (max-width: 700px) {
   .objetivo-container-texto h2 {
-    margin-top: 2rem;
+    margin-top: 0.8rem;
     font-size: 1rem;
   }
 }
 .objetivo-container-texto p {
-  width: 65%;
+  width: 75%;
   margin: 3rem;
   color: #000;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   text-align: justify;
   margin-left: 0;
@@ -152,7 +153,8 @@ li {
 @media (max-width: 700px) {
   .objetivo-container-texto p {
     width: 90%;
-    margin: 1rem;
+    margin: 0;
+    padding-top: 0.5rem;
     font-size: 1rem;
   }
 }
