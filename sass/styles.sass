@@ -41,12 +41,13 @@
         li
             display: flex
             align-items: flex-start
-            width: 150px
+            width: 175px
 
             a
                 width: 100%
                 background: rgba(255,255,255, 0.6 )
                 color: $dark-color
+                text-align: center
                 font-weight: bold
                 padding: 10px 20px
                 text-transform: uppercase
@@ -55,6 +56,14 @@
                     color: $black
                     border-bottom: 2px solid #fff
                     background-color: rgba(255,255,255, 0.3 )
+        #acao-down
+            margin: 0
+            padding: 0
+            position: absolute
+            width: 15px
+            height: 25px
+            margin-left: 10px
+
 
 
 
@@ -127,7 +136,8 @@
             padding-top: 0.5rem
             font-size: 1rem
 
-//CSS da pagina de Atividades
+// fim Objetivo
+//página de Atividades
 .atividade
     height: 100dvh
     position: absolute
@@ -148,7 +158,7 @@
         h2
             @extend %section-title
             width: 200px
-            border-radius: 5px
+            border-radius: 10px
             @include mobile
                 margin-top: 3rem
                 font-size: 1rem
@@ -156,24 +166,23 @@
     .atividade-foto
         display: flex
         flex-direction: row
-        justify-content: flex-end
+        justify-content: center
         margin-top: 0
         padding: 0
         @include mobile
             flex-direction: row
             align-items: center
             justify-content: center
-
+        
         .atividade-foto-1
             display: flex
-            background: url(../img/atividade-1.png)
-            width: 17vw
-            height: 40vh
-            background-size: contain
-            background-repeat: no-repeat
-            margin-top: -2rem
-            margin-right: 1rem
-            margin-bottom: 2rem
+            flex: 1
+            justify-content: center
+            img
+                width: 200px
+                height: 200px
+                margin: 1rem
+    
             @include mobile
                 margin-top: 1rem
                 margin-bottom: 1rem
@@ -183,13 +192,12 @@
 
         .atividade-foto-2
             display: flex
-            background: url(../img/atividade-2.png)
-            width: 17vw
-            height: 40vh
-            background-size: contain
-            background-repeat: no-repeat
-            margin-top: -2rem
-            margin-bottom: 2rem
+            flex: 1
+            justify-content: center
+            img
+                width: 200px
+                height: 200px
+                margin: 1rem
             @include mobile
                 margin-top: 1rem
                 margin-bottom: 1rem
@@ -200,13 +208,13 @@
         display: flex
         flex-direction: row
         justify-content: center
-        margin-top: -4rem
+        margin-top: -3rem
         @include mobile
             flex-direction: column
             margin-top: -3rem
 
     .atividade-container-texto
-        width: 30%
+        flex: 1
         margin: 1rem
         @include mobile
             width: 90%
@@ -223,9 +231,11 @@
                 font-size: 1rem
 
         #equipamentos
-            width: 350px
+            width: 300px
             @include mobile
                 margin-top: -1rem
+        #paragrafo-equipamentos
+            font-size: 1rem
         
         #convivio
             width: 250px
@@ -241,10 +251,29 @@
                 font-size: .8rem
             
 
-//Fim do CSS da pagina de Atividades
+//fim Atividades
+
+//página Ação Social
+
+.acao-social
+    position: absolute
+    height: 100dvh
+    top: 0
+    left: 0
+    background: rgba(255,255,255,0.6)
+
+    .acao-social-h3
+        @extend %section-title
+        width: 200px
+        font-size: 1rem
+        border-radius: 5px
+        margin: 1rem
+        margin-top: 6.5rem
+
+//fim Ação Social
 
 .services-container
-    background: linear-gradient(rgba(0,0,0,0.6 ), rgba(0,0,0,0.6)), url('../img/eagle.jpg')
+    background: linear-gradient(rgba(0,0,0,0.8 ), rgba(0,0,0,0.8)), url('../img/eagle.jpg')
     height: 100dvh
     background-size: 100% 100%
     background-attachment: fixed
@@ -254,7 +283,7 @@
     z-index: 99
     @include mobile
         max-height: 100dvh
-        background: linear-gradient(rgba(0,0,0,0.6 ), rgba(0,0,0,0.6)), url('../img/eagle-2.png')
+        background: linear-gradient(rgba(0,0,0,0.8 ), rgba(0,0,0,0.8)), url('../img/eagle-2.png')
         background-attachment: fixed
         background-position: center
         display: flex
@@ -265,10 +294,10 @@
         height: 900px
 
     h2
-        width: 200px
+        width: 250px
         @extend %section-title
         border-radius: 5px
-        margin-top: -1rem
+        margin-top: 0
         @include mobile
             margin-top: 0.5rem
             margin-bottom: 0.5rem
@@ -359,7 +388,7 @@
 
 
 .local-data
-    background: linear-gradient(rgba(255,255,255,0.7 ), rgba(255, 255, 255, 0.7)), url('../img/acude-velho.jpg')
+    background: linear-gradient(rgba(255,255,255,0.75 ), rgba(255, 255, 255, 0.75)), url('../img/acude-velho.jpg')
     background-attachment: fixed
     background-size: cover
     padding: 3rem
@@ -394,7 +423,7 @@
             width: 100%
 
         .local-foto
-            background: url(../img/local-foto.jpg)
+            background: url(../img/local-foto.png)
             width: 65vw
             height: 70vh
             background-size: contain
@@ -481,7 +510,7 @@ footer
         .realizacao-card
             display: flex
             flex-direction: columns
-            justify-content: center
+            justify-content: space-around
             align-items: center
             gap: 20px
             padding: 2rem

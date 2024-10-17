@@ -13,7 +13,7 @@ li {
   list-style: none;
 }
 
-.local-data .local .local-data-container-1 h3, .local-data h2, .services-container h2, .atividade .atividade-container-texto h3, .atividade .atividade-texto h2, .objetivo-container-texto h2 {
+.local-data .local .local-data-container-1 h3, .local-data h2, .services-container h2, .acao-social .acao-social-h3, .atividade .atividade-container-texto h3, .atividade .atividade-texto h2, .objetivo-container-texto h2 {
   font-size: 1.2rem;
   background-color: #181920;
   margin-top: 2rem;
@@ -64,12 +64,13 @@ li {
 #main-banner .nav-container-navbar li {
   display: flex;
   align-items: flex-start;
-  width: 150px;
+  width: 175px;
 }
 #main-banner .nav-container-navbar li a {
   width: 100%;
   background: rgba(255, 255, 255, 0.6);
   color: #181920;
+  text-align: center;
   font-weight: bold;
   padding: 10px 20px;
   text-transform: uppercase;
@@ -79,6 +80,14 @@ li {
   color: #000;
   border-bottom: 2px solid #fff;
   background-color: rgba(255, 255, 255, 0.3);
+}
+#main-banner .nav-container-navbar #acao-down {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 15px;
+  height: 25px;
+  margin-left: 10px;
 }
 #main-banner .fa-bars {
   display: none;
@@ -191,7 +200,7 @@ li {
 }
 .atividade .atividade-texto h2 {
   width: 200px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 @media (max-width: 700px) {
   .atividade .atividade-texto h2 {
@@ -202,7 +211,7 @@ li {
 .atividade .atividade-foto {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   margin-top: 0;
   padding: 0;
 }
@@ -215,14 +224,13 @@ li {
 }
 .atividade .atividade-foto .atividade-foto-1 {
   display: flex;
-  background: url(../img/atividade-1.png);
-  width: 17vw;
-  height: 40vh;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-top: -2rem;
-  margin-right: 1rem;
-  margin-bottom: 2rem;
+  flex: 1;
+  justify-content: center;
+}
+.atividade .atividade-foto .atividade-foto-1 img {
+  width: 200px;
+  height: 200px;
+  margin: 1rem;
 }
 @media (max-width: 700px) {
   .atividade .atividade-foto .atividade-foto-1 {
@@ -235,13 +243,13 @@ li {
 }
 .atividade .atividade-foto .atividade-foto-2 {
   display: flex;
-  background: url(../img/atividade-2.png);
-  width: 17vw;
-  height: 40vh;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-top: -2rem;
-  margin-bottom: 2rem;
+  flex: 1;
+  justify-content: center;
+}
+.atividade .atividade-foto .atividade-foto-2 img {
+  width: 200px;
+  height: 200px;
+  margin: 1rem;
 }
 @media (max-width: 700px) {
   .atividade .atividade-foto .atividade-foto-2 {
@@ -255,7 +263,7 @@ li {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: -4rem;
+  margin-top: -3rem;
 }
 @media (max-width: 700px) {
   .atividade .atividade-container {
@@ -264,7 +272,7 @@ li {
   }
 }
 .atividade .atividade-container-texto {
-  width: 30%;
+  flex: 1;
   margin: 1rem;
 }
 @media (max-width: 700px) {
@@ -286,12 +294,15 @@ li {
   }
 }
 .atividade .atividade-container-texto #equipamentos {
-  width: 350px;
+  width: 300px;
 }
 @media (max-width: 700px) {
   .atividade .atividade-container-texto #equipamentos {
     margin-top: -1rem;
   }
+}
+.atividade .atividade-container-texto #paragrafo-equipamentos {
+  font-size: 1rem;
 }
 .atividade .atividade-container-texto #convivio {
   width: 250px;
@@ -313,8 +324,23 @@ li {
   }
 }
 
+.acao-social {
+  position: absolute;
+  height: 100dvh;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.6);
+}
+.acao-social .acao-social-h3 {
+  width: 200px;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin: 1rem;
+  margin-top: 6.5rem;
+}
+
 .services-container {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/eagle.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/eagle.jpg");
   height: 100dvh;
   background-size: 100% 100%;
   background-attachment: fixed;
@@ -326,7 +352,7 @@ li {
 @media (max-width: 700px) {
   .services-container {
     max-height: 100dvh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/eagle-2.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/eagle-2.png");
     background-attachment: fixed;
     background-position: center;
     display: flex;
@@ -338,9 +364,9 @@ li {
   }
 }
 .services-container h2 {
-  width: 200px;
+  width: 250px;
   border-radius: 5px;
-  margin-top: -1rem;
+  margin-top: 0;
 }
 @media (max-width: 700px) {
   .services-container h2 {
@@ -449,7 +475,7 @@ li {
 }
 
 .local-data {
-  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../img/acude-velho.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("../img/acude-velho.jpg");
   background-attachment: fixed;
   background-size: cover;
   padding: 3rem;
@@ -492,7 +518,7 @@ li {
   }
 }
 .local-data .local .local-foto {
-  background: url(../img/local-foto.jpg);
+  background: url(../img/local-foto.png);
   width: 65vw;
   height: 70vh;
   background-size: contain;
@@ -598,7 +624,7 @@ footer .wrap {
 footer .wrap .realizacao-card {
   display: flex;
   flex-direction: columns;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 20px;
   padding: 2rem;
