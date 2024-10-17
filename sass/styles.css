@@ -13,7 +13,7 @@ li {
   list-style: none;
 }
 
-.local-data .local .local-data-container-1 h3, .local-data h2, .services-container h2, .acao-social .acao-social-h3, .atividade .atividade-container-texto h3, .atividade .atividade-texto h2, .objetivo-container-texto h2 {
+.local-data .local .local-data-container-1 h3, .local-data h2, .services-container h2, .acao-social .acao-social-h3, .atividade .atividade-container-texto h3, .atividade .atividade-texto h2, .objetivo-container .objetivo-container-texto h2 {
   font-size: 1.2rem;
   background-color: #181920;
   margin-top: 2rem;
@@ -137,73 +137,62 @@ li {
 }
 @media (max-width: 700px) {
   .objetivo-container {
-    width: 99vw;
+    width: 100vw;
     flex-direction: column;
     align-items: center;
     padding: 0;
+    margin: 0;
   }
 }
-
-.objetivo-foto {
-  margin: 3rem;
-  margin-left: -15rem;
-}
-.objetivo-foto img {
-  width: 400px;
-  height: 450px;
+.objetivo-container .objetivo-container-texto {
+  padding: 1rem;
 }
 @media (max-width: 700px) {
-  .objetivo-foto {
-    margin-left: 15%;
-    margin-top: 1rem;
-  }
-  .objetivo-foto img {
-    width: 300px;
-    height: 350px;
-  }
-}
-
-.objetivo-container-texto {
-  margin: 3rem;
-  margin-top: 1.2rem;
-  margin-bottom: 2rem;
-}
-@media (max-width: 700px) {
-  .objetivo-container-texto {
+  .objetivo-container .objetivo-container-texto {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 90%;
-    margin: 0;
-    margin-top: 2rem;
   }
 }
-.objetivo-container-texto h2 {
-  margin-top: 4rem;
+.objetivo-container .objetivo-container-texto h2 {
+  padding-top: 0.5rem;
   width: 200px;
   border-radius: 5px;
 }
 @media (max-width: 700px) {
-  .objetivo-container-texto h2 {
+  .objetivo-container .objetivo-container-texto h2 {
     margin-top: 0.8rem;
     font-size: 1rem;
   }
 }
-.objetivo-container-texto p {
+.objetivo-container .objetivo-container-texto p {
   width: 75%;
   margin: 3rem;
   color: #000;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: bold;
   text-align: justify;
   margin-left: 0;
 }
 @media (max-width: 700px) {
-  .objetivo-container-texto p {
+  .objetivo-container .objetivo-container-texto p {
     width: 90%;
     margin: 0;
     padding-top: 2rem;
     font-size: 0.8rem;
+  }
+}
+.objetivo-container .objetivo-foto img {
+  width: 400px;
+  height: 450px;
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+@media (max-width: 700px) {
+  .objetivo-container img {
+    width: 200px;
+    height: 250px;
   }
 }
 
