@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "lato";
+  font-family: "lato", sans-serif;
 }
 
 a {
@@ -51,7 +51,7 @@ li {
   justify-content: center;
   position: fixed;
   top: 20px;
-  right: 15px;
+  right: 10px;
   z-index: 10;
 }
 #main-banner .nav-container-navbar {
@@ -64,12 +64,13 @@ li {
 #main-banner .nav-container-navbar li {
   display: flex;
   align-items: flex-start;
-  width: 175px;
+  width: 150px;
 }
 #main-banner .nav-container-navbar li a {
   width: 100%;
   background: rgba(255, 255, 255, 0.6);
   color: #181920;
+  font-size: 0.8rem;
   text-align: center;
   font-weight: bold;
   padding: 10px 20px;
@@ -88,13 +89,41 @@ li {
   width: 15px;
   height: 25px;
   margin-left: 10px;
+  margin-top: -5px;
 }
-#main-banner .fa-bars {
+#main-banner #menu_mobile, #main-banner .nav_mobile {
   display: none;
 }
-@media (max-width: 700px) {
-  #main-banner .fa-bars {
-    display: inline;
+@media screen and (max-width: 800px) {
+  #main-banner .nav-container, #main-banner .nav-container-navbar, #main-banner #acao-down {
+    display: none;
+  }
+  #main-banner #menu_mobile {
+    overflow: hidden;
+    position: fixed;
+    top: 10px;
+    right: 0;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 40px;
+    background: rgba(255, 255, 255, 0.6);
+    transition: width 0.4s;
+    z-index: 10;
+  }
+  #main-banner #menu_mobile .nav_mobile {
+    margin: 8px 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  #main-banner #menu_mobile .nav_mobile a {
+    color: black;
+  }
+  #main-banner #menu_mobile .nav_mobile a img {
+    margin-top: 5px;
+    width: 20px;
+    height: 25px;
   }
 }
 
@@ -128,7 +157,7 @@ li {
     width: 200px;
     height: 200px;
     background-size: contain;
-    margin-left: auto;
+    margin-left: 25%;
     margin-top: 1rem;
   }
 }
@@ -143,9 +172,9 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 85%;
     margin: 0;
-    margin-top: 4rem;
+    margin-top: 7rem;
   }
 }
 .objetivo-container-texto h2 {
@@ -186,9 +215,9 @@ li {
 }
 .atividade .atividade-texto {
   text-align: left;
-  padding-top: 6rem;
+  padding-top: 4rem;
   padding-left: 2rem;
-  margin-top: -5rem;
+  margin-top: -4rem;
 }
 @media (max-width: 700px) {
   .atividade .atividade-texto {
@@ -302,7 +331,7 @@ li {
   }
 }
 .atividade .atividade-container-texto #paragrafo-equipamentos {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .atividade .atividade-container-texto #convivio {
   width: 250px;
@@ -329,7 +358,7 @@ li {
   height: 100dvh;
   top: 0;
   left: 0;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.5);
 }
 .acao-social .acao-social-h3 {
   width: 200px;
@@ -337,6 +366,12 @@ li {
   border-radius: 5px;
   margin: 1rem;
   margin-top: 6.5rem;
+}
+.acao-social .acao-social-texto {
+  width: 45%;
+  margin: 2rem;
+  text-align: justify;
+  font-weight: bold;
 }
 
 .services-container {
@@ -395,6 +430,7 @@ li {
   height: 80vh;
   background-size: contain;
   background-repeat: no-repeat;
+  margin-top: 2rem;
 }
 @media (max-width: 700px) {
   .services-container .sobre-evento {
@@ -440,10 +476,11 @@ li {
 }
 .services-container .services-card p {
   color: #FFF;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: justify;
   font-weight: bold;
   padding-top: 2rem;
+  margin-left: -5rem;
 }
 @media (max-width: 700px) {
   .services-container .services-card p {
