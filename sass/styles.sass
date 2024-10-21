@@ -83,7 +83,6 @@
             flex-direction: column
             gap: 8px
             width: 40px
-            background: rgba(255,255,255, 0.6 )
             transition: width 0.4s
             z-index: 10
 
@@ -93,6 +92,8 @@
                 flex-direction: column
                 a
                     color: black
+                    &:hover
+                        color: red
 
                     img
                         margin-top: 5px
@@ -102,25 +103,29 @@
 //CSS pagina Objetivo
 .objetivo-container
     height: 100dvh
+    width: 100dvw
     position: absolute
     top: 0
     left: 0
     display: flex
     background-color: rgba(255,255,255, 0.6 )
     @include mobile
-        width: 100vw 
+        width: 99.5vw 
         flex-direction: column
         align-items: center
         padding: 0
         margin: 0
 
     .objetivo-container-texto
-        padding: 1rem
+        flex: 1
+        margin-left: 5rem
+        width: 90%
         @include mobile
+            margin-left: 0
             display: flex
             flex-direction: column
             align-items: center
-            width: 90%
+            width: 95%
 
         h2
             padding-top: 0.5rem
@@ -144,17 +149,18 @@
                 width: 100%
                 margin: 0
                 padding-top: 1rem
-                font-size: 1rem
+                font-size: 0.9rem
     .objetivo-foto
+        flex: 1
         img
-            width: 400px
+            width: 350px
             height: 450px
-            margin-top: 2rem
-            margin-right: 2rem
-    @include mobile
-        img
-            width: 200px
-            height: 250px
+            margin-top: 5rem
+        @include mobile
+            img
+                margin-top: 0
+                width: 200px
+                height: 250px
 
 
 // fim Objetivo
@@ -181,7 +187,7 @@
             width: 200px
             border-radius: 10px
             @include mobile
-                margin-top: 2rem
+                margin-top: 1rem
                 font-size: 0.9rem
 
     .atividade-foto
@@ -226,6 +232,9 @@
                     width: 150px
                     height: 150px
                     margin: 1rem
+    @media screen and (max-width: 875px)
+        .atividade-foto, .atividade-foto-1, .atividade-foto-2
+            display: none
 
     .atividade-container
         display: flex
@@ -234,7 +243,7 @@
         margin-top: -3rem
         @include mobile
             flex-direction: column
-            margin-top: -3rem
+            margin-top: -1.5rem
 
     .atividade-container-texto
         flex: 1
@@ -261,7 +270,7 @@
                 width: 250px
                 margin-top: 0
         #paragrafo-equipamentos
-            font-size: 0.9rem
+            font-size: 0.8rem
         
         #convivio
             width: 250px
@@ -406,6 +415,7 @@
                 width: 100%
                 padding-top: 1rem
                 font-size: 0.95rem
+                margin-left: 0
             
 .demonstracao
     height: 100vh
