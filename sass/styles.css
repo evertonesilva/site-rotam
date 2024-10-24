@@ -108,19 +108,22 @@ li {
     flex-direction: column;
     gap: 8px;
     width: 40px;
-    transition: width 0.4s;
     z-index: 10;
   }
   #main-banner #menu_mobile .nav_mobile {
     margin: 8px 8px;
     display: flex;
     flex-direction: column;
+    transition: font-size 0.5s;
   }
   #main-banner #menu_mobile .nav_mobile a {
     color: black;
   }
   #main-banner #menu_mobile .nav_mobile a:hover {
     color: red;
+  }
+  #main-banner #menu_mobile .nav_mobile a i:hover {
+    font-size: 1.8rem;
   }
   #main-banner #menu_mobile .nav_mobile a img {
     margin-top: 5px;
@@ -131,10 +134,11 @@ li {
 #main-banner .carrosel {
   display: flex;
   flex-direction: column;
+  align-items: center;
   overflow: hidden;
   gap: 25px;
   position: relative;
-  width: 500px;
+  width: 400px;
   height: 100vh;
   left: 50%;
   transform: translate(-50%);
@@ -151,6 +155,7 @@ li {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  cursor: grab;
 }
 #main-banner .carrosel .slide img {
   width: 400px;
@@ -162,7 +167,48 @@ li {
     height: 250px;
   }
 }
+#main-banner .carrosel .slide:active {
+  cursor: grabbing;
+}
+@media screen and (max-width: 600px) {
+  #main-banner .btn-carrosel {
+    display: none;
+  }
+}
+#main-banner .card-inscricao {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+#main-banner .card-inscricao span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #000;
+}
+#main-banner .card-inscricao span p {
+  text-align: center;
+  font-size: 1rem;
+  color: #000;
+}
+#main-banner .card-inscricao span p:hover {
+  color: #ff5200;
+}
+#main-banner .card-inscricao span:hover {
+  color: #ff5200;
+  animation: zoom-icons 1s linear normal;
+}
 
+@keyframes zoom-icons {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
 .objetivo-container {
   height: 100dvh;
   width: 100dvw;
@@ -327,7 +373,7 @@ li {
     margin: 1rem;
   }
 }
-@media screen and (max-width: 875px) {
+@media screen and (max-width: 410px) {
   .atividade .atividade-foto, .atividade .atividade-foto-1, .atividade .atividade-foto-2 {
     display: none;
   }
