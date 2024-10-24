@@ -129,18 +129,38 @@ li {
   }
 }
 #main-banner .carrosel {
-  position: absolute;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid black;
-  width: 100vw;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 25px;
+  position: relative;
+  width: 500px;
   height: 100vh;
+  left: 50%;
+  transform: translate(-50%);
+}
+@media (max-width: 700px) {
+  #main-banner .carrosel {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    bottom: 25px;
+  }
+}
+#main-banner .carrosel .slide {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 #main-banner .carrosel .slide img {
-  border: 2px solid black;
   width: 400px;
   height: 300px;
+}
+@media (max-width: 700px) {
+  #main-banner .carrosel .slide img {
+    width: 250px;
+    height: 250px;
+  }
 }
 
 .objetivo-container {
