@@ -128,6 +128,20 @@ li {
     height: 25px;
   }
 }
+#main-banner .carrosel {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  width: 100vw;
+  height: 100vh;
+}
+#main-banner .carrosel .slide img {
+  border: 2px solid black;
+  width: 400px;
+  height: 300px;
+}
 
 .objetivo-container {
   height: 100dvh;
