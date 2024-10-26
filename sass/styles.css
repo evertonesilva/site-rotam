@@ -13,7 +13,7 @@ li {
   list-style: none;
 }
 
-.local-data .local .local-data-container-1 h3, .local-data h2, .services-container h2, .acao-social .acao-social-h3, .atividade .atividade-container-texto h3, .atividade .atividade-texto h2, .objetivo-container .objetivo-container-texto h2 {
+.local-data .local .local-data-container-1 h3, .local-data h2, .services-container h2, .acao-social .acao-social-texto h3, .atividade .atividade-container-texto h3, .atividade .atividade-texto h2, .objetivo-container .objetivo-container-texto h2 {
   font-size: 1.2rem;
   background-color: #181920;
   margin-top: 2rem;
@@ -141,6 +141,7 @@ li {
   width: 400px;
   height: 100vh;
   left: 50%;
+  bottom: 0;
   transform: translate(-50%);
 }
 @media (max-width: 700px) {
@@ -459,14 +460,17 @@ li {
   left: 0;
   background: rgba(255, 255, 255, 0.5);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 @media (max-width: 700px) {
   .acao-social {
     flex-direction: column;
   }
 }
-.acao-social .acao-social-h3 {
+.acao-social .acao-social-texto {
+  flex: 1;
+}
+.acao-social .acao-social-texto h3 {
   width: 200px;
   font-size: 1rem;
   border-radius: 5px;
@@ -474,24 +478,30 @@ li {
   margin-top: 6.5rem;
 }
 @media (max-width: 700px) {
-  .acao-social .acao-social-h3 {
+  .acao-social .acao-social-texto h3 {
     margin: 1rem auto;
-    margin-top: 7rem;
+    margin-top: 3rem;
   }
 }
-.acao-social .acao-social-texto {
-  width: 45%;
+.acao-social .acao-social-texto p {
+  width: 80%;
   margin: 2rem;
   text-align: justify;
   font-weight: bold;
 }
 @media (max-width: 700px) {
-  .acao-social .acao-social-texto {
+  .acao-social .acao-social-texto p {
     width: 90%;
+    font-size: 0.9rem;
     margin: 0 auto;
+    margin-bottom: 1rem;
   }
 }
-
+.acao-social .acao-social-video {
+  flex: 1;
+  margin: auto;
+  padding-left: 7rem;
+}
 .services-container {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/eagle.jpg");
   height: 100dvh;
