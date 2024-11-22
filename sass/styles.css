@@ -146,10 +146,10 @@ li {
 }
 @media (max-width: 700px) {
   #main-banner .carrosel {
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     position: absolute;
-    bottom: 25px;
+    bottom: 80px;
   }
 }
 #main-banner .carrosel .slide {
@@ -178,19 +178,25 @@ li {
 }
 #main-banner .card-inscricao {
   position: absolute;
-  left: 10px;
-  bottom: 10px;
+  left: 60px;
+  bottom: 50px;
+  width: 50px;
+  height: 15px;
 }
 #main-banner .card-inscricao span {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
   font-size: 2rem;
   color: #000;
 }
 #main-banner .card-inscricao span p {
+  background-color: rgba(255, 255, 255, 0.4);
   text-align: center;
+  border-radius: 5px;
   font-size: 1rem;
   color: #000;
 }
@@ -494,7 +500,7 @@ li {
     width: 90%;
     font-size: 0.9rem;
     margin: 0 auto;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
   }
 }
 .acao-social .acao-social-video {
@@ -502,6 +508,13 @@ li {
   margin: auto;
   padding-left: 7rem;
 }
+@media (max-width: 700px) {
+  .acao-social .acao-social-video {
+    padding-left: 0;
+    margin-top: -4rem;
+  }
+}
+
 .services-container {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/eagle.jpg");
   height: 100dvh;
