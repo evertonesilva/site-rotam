@@ -803,6 +803,19 @@ footer .wrap {
 footer .wrap .patrocinadores {
   border-bottom: 1px solid white;
 }
+footer .wrap .patrocinadores .patrocinadores-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 700px) {
+  footer .wrap .patrocinadores .patrocinadores-card {
+    flex-wrap: wrap;
+  }
+}
+footer .wrap .patrocinadores .patrocinadores-card img {
+  margin: 20px;
+}
 footer .wrap .realizacao-card {
   display: flex;
   flex-direction: columns;

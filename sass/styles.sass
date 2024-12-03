@@ -654,6 +654,16 @@ footer
         
         .patrocinadores
             border-bottom: 1px solid white
+            
+            .patrocinadores-card
+                display: flex
+                align-items: center
+                justify-content: center
+                @include mobile
+                    flex-wrap: wrap
+                
+                img
+                    margin: 20px
 
         .realizacao-card
             display: flex
