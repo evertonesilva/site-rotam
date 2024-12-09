@@ -639,6 +639,11 @@
                 margin: 0
                 display: flex
 
+@keyframes slides
+    0%
+        transform: translateX(0)
+    100%
+        transform: translateX(-100%)
 footer
     background-color: $footer-bg
     color: $text-color
@@ -651,19 +656,26 @@ footer
         border-bottom: 1px solid white
         @include mobile
             flex-direction: column
-        
+
         .patrocinadores
             border-bottom: 1px solid white
-            
-            .patrocinadores-card
-                display: flex
-                align-items: center
-                justify-content: center
-                @include mobile
-                    flex-wrap: wrap
+
+            .logos
+                overflow: hidden
+                padding: 60px 0
+                white-space: nowrap
                 
-                img
-                    margin: 20px
+                &:hover .logos-slide
+                    animation-play-state: paused
+
+                .logos-slide
+                    display: inline-block
+                    animation: 15s slides infinite  linear
+            
+                .logos-slide img
+                    height: 70px
+                    margin: 0 40px
+
 
         .realizacao-card
             display: flex
