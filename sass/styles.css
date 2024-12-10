@@ -27,6 +27,7 @@ li {
 #main-banner {
   background: url("../img/1.jpg");
   height: 100dvh;
+  min-height: 752px;
   background-size: 100% 100%;
   background-position: center;
   max-height: 600px;
@@ -218,7 +219,8 @@ li {
 }
 .objetivo-container {
   height: 100dvh;
-  width: 100dvw;
+  width: 100vw;
+  min-height: 752px;
   position: absolute;
   top: 0;
   left: 0;
@@ -295,6 +297,7 @@ li {
 
 .atividade {
   height: 100dvh;
+  min-height: 752px;
   position: absolute;
   top: 0;
   left: 0;
@@ -462,6 +465,7 @@ li {
 .acao-social {
   position: absolute;
   height: 100dvh;
+  min-height: 752px;
   top: 0;
   left: 0;
   background: rgba(255, 255, 255, 0.5);
@@ -518,6 +522,7 @@ li {
 .services-container {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/eagle.jpg");
   height: 100dvh;
+  min-height: 812px;
   background-size: 100% 100%;
   background-attachment: fixed;
   text-align: left;
@@ -634,6 +639,7 @@ li {
 
 .demonstracao {
   height: 100vh;
+  min-height: 652px;
   background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/1.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -654,6 +660,7 @@ li {
 }
 
 .local-data {
+  min-height: 652px;
   background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("../img/acude-velho.jpg");
   background-attachment: fixed;
   background-size: cover;
