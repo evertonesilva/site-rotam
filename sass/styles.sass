@@ -5,10 +5,11 @@
 #main-banner
     background: url('../img/1.jpg')
     height: 100dvh
+    width: 100dvw
     background-size: 100% 100%
     background-position: center
     @include mobile
-        max-height: 100dvh
+        height: 100dvh
         min-height: 752px
         background: url('../img/1-2.jpg')
         background-size: 100% 100%
@@ -424,13 +425,13 @@
 .services-container
     background: linear-gradient(rgba(0,0,0,0.8 ), rgba(0,0,0,0.8)), url('../img/eagle.jpg')
     height: 100dvh
+    width: 100dvw
     background-size: 100% 100%
     background-attachment: fixed
     text-align: left
     padding: 2rem
-    max-height: 600px
-    z-index: 99
     @include mobile
+        height: 900px
         max-height: 100dvh
         min-height: 812px
         background: linear-gradient(rgba(0,0,0,0.8 ), rgba(0,0,0,0.8)), url('../img/eagle-2.png')
@@ -441,34 +442,37 @@
         flex-direction: column
         background-size: cover
         padding: 0
-        height: 900px
 
-    h2
-        width: 250px
-        @extend %section-title
-        border-radius: 5px
-        margin-top: 0
-        @include mobile
-            margin-top: 0.5rem
-            margin-bottom: 0.5rem
+    .services
+        max-width: 75%
+        margin: auto
+        padding-top: 2rem
+        h2
+            width: 250px
+            @extend %section-title
+            border-radius: 5px
+            margin-top: 0
+            @include mobile
+                margin-top: 0.5rem
+                margin-bottom: 0.5rem
             
 
-    .services-card-container
-        margin-bottom: 1rem
-        display: flex
-        justify-content: space-around
-        padding: 2rem
-        @include mobile
-            flex-direction: column
-            align-items: center
+        .services-card-container
             width: 100%
-            height: 100%
-            padding: 0
+            margin-bottom: 1rem
+            display: flex
+            justify-content: space-around
+            @include mobile
+                flex-direction: column
+                align-items: center
+                width: 100%
+                height: 100%
+                padding: 0
     
     .sobre-evento
         img
-            width: 300px
-            height: 375px
+            width: 20vw
+            height: 55vh
             background-size: contain
             background-repeat: no-repeat
             margin-top: 2rem
@@ -479,9 +483,9 @@
                 margin-bottom: 2rem
 
     .services-card
-        width: 60%
+        width: 75%
         height: 70vh
-        margin: 1%
+        margin-left: 3rem
         padding: 3rem
         margin-top: 0
         @include mobile
@@ -496,7 +500,7 @@
 
         h3
             font-size: 2rem
-            width: 350px
+            width: 18vw
             text-align: center
             border-radius: 5px
             background-color: $light-color
@@ -509,8 +513,9 @@
                 margin-bottom: 0
 
         p
+            width: 55vw
             color: $light-color
-            font-size: 1.2rem
+            font-size: 1rem
             text-align: justify
             font-weight: bold
             padding-top: 2rem
@@ -522,7 +527,8 @@
                 margin-left: 0
             
 .demonstracao
-    height: 100vh
+    height: 100dvh
+    width: 100dvw
     background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6 )), url(../img/1.jpg)
     background-size: 100% 100%
     background-repeat: no-repeat
@@ -544,10 +550,12 @@
     background: linear-gradient(rgba(255,255,255,0.75 ), rgba(255, 255, 255, 0.75)), url('../img/acude-velho.jpg')
     background-attachment: fixed
     background-size: cover
+    height: 100dvh
+    width: 100dvw
     padding: 3rem
-    max-height: 600px
+    margin: auto
     @include mobile
-        max-height: 100dvh
+        height: 100dvh
         min-height: 700px
         background-size: cover
         display: flex
@@ -556,14 +564,16 @@
         padding: 2rem
         margin: 0
         padding: 0
-
-    h2
-        width: 200px
-        @extend %section-title
-        margin: 1.2rem
-        border-radius: 5px
-        @include mobile
-            font-size: 1rem
+    .local-data-evento
+        max-width: 80%
+        margin: auto
+        h2
+            width: 200px
+            @extend %section-title
+            margin: 1.2rem
+            border-radius: 5px
+            @include mobile
+                font-size: 1rem
     
     .local
         max-height: 100%
@@ -578,8 +588,8 @@
 
         .local-foto
             img
-                width: 500px
-                height: 450px
+                width: 35vw
+                height: 70vh
                 background-size: contain
                 background-repeat: no-repeat
                 @include mobile
@@ -618,7 +628,7 @@
         
             p
                 width: 70%
-                font-size: 1.3rem
+                font-size: 1rem
                 text-align: justify
                 margin: 1rem
                 color: $black
@@ -705,7 +715,8 @@ footer
 
     .footer-container
         max-width: 1200px
-        margin: 10px
+        margin: auto
+        padding-top: 2rem
         display: flex
         flex-wrap: wrap
         justify-content: space-between

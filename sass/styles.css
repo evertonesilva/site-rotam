@@ -13,7 +13,7 @@ li {
   list-style: none;
 }
 
-.local-data .local .local-data-container-1 h3, .local-data h2, .services-container h2, .acao-social .acao-social-texto h3, .atividade .atividade-container-texto h3, .atividade .atividade-texto h2, .objetivo-container .objetivo-container-texto h2 {
+.local-data .local .local-data-container-1 h3, .local-data .local-data-evento h2, .services-container .services h2, .acao-social .acao-social-texto h3, .atividade .atividade-container-texto h3, .atividade .atividade-texto h2, .objetivo-container .objetivo-container-texto h2 {
   font-size: 1.2rem;
   background-color: #181920;
   margin-top: 2rem;
@@ -27,12 +27,13 @@ li {
 #main-banner {
   background: url("../img/1.jpg");
   height: 100dvh;
+  width: 100dvw;
   background-size: 100% 100%;
   background-position: center;
 }
 @media (max-width: 700px) {
   #main-banner {
-    max-height: 100dvh;
+    height: 100dvh;
     min-height: 752px;
     background: url("../img/1-2.jpg");
     background-size: 100% 100%;
@@ -526,15 +527,15 @@ li {
 .services-container {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/eagle.jpg");
   height: 100dvh;
+  width: 100dvw;
   background-size: 100% 100%;
   background-attachment: fixed;
   text-align: left;
   padding: 2rem;
-  max-height: 600px;
-  z-index: 99;
 }
 @media (max-width: 700px) {
   .services-container {
+    height: 900px;
     max-height: 100dvh;
     min-height: 812px;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/eagle-2.png");
@@ -545,28 +546,32 @@ li {
     flex-direction: column;
     background-size: cover;
     padding: 0;
-    height: 900px;
   }
 }
-.services-container h2 {
+.services-container .services {
+  max-width: 75%;
+  margin: auto;
+  padding-top: 2rem;
+}
+.services-container .services h2 {
   width: 250px;
   border-radius: 5px;
   margin-top: 0;
 }
 @media (max-width: 700px) {
-  .services-container h2 {
+  .services-container .services h2 {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
 }
-.services-container .services-card-container {
+.services-container .services .services-card-container {
+  width: 100%;
   margin-bottom: 1rem;
   display: flex;
   justify-content: space-around;
-  padding: 2rem;
 }
 @media (max-width: 700px) {
-  .services-container .services-card-container {
+  .services-container .services .services-card-container {
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -575,8 +580,8 @@ li {
   }
 }
 .services-container .sobre-evento img {
-  width: 300px;
-  height: 375px;
+  width: 20vw;
+  height: 55vh;
   background-size: contain;
   background-repeat: no-repeat;
   margin-top: 2rem;
@@ -590,9 +595,9 @@ li {
   }
 }
 .services-container .services-card {
-  width: 60%;
+  width: 75%;
   height: 70vh;
-  margin: 1%;
+  margin-left: 3rem;
   padding: 3rem;
   margin-top: 0;
 }
@@ -608,7 +613,7 @@ li {
 }
 .services-container .services-card h3 {
   font-size: 2rem;
-  width: 350px;
+  width: 18vw;
   text-align: center;
   border-radius: 5px;
   background-color: #FFF;
@@ -624,8 +629,9 @@ li {
   }
 }
 .services-container .services-card p {
+  width: 55vw;
   color: #FFF;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: justify;
   font-weight: bold;
   padding-top: 2rem;
@@ -641,7 +647,8 @@ li {
 }
 
 .demonstracao {
-  height: 100vh;
+  height: 100dvh;
+  width: 100dvw;
   background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/1.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -666,12 +673,14 @@ li {
   background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("../img/acude-velho.jpg");
   background-attachment: fixed;
   background-size: cover;
+  height: 100dvh;
+  width: 100dvw;
   padding: 3rem;
-  max-height: 600px;
+  margin: auto;
 }
 @media (max-width: 700px) {
   .local-data {
-    max-height: 100dvh;
+    height: 100dvh;
     min-height: 700px;
     background-size: cover;
     display: flex;
@@ -682,13 +691,17 @@ li {
     padding: 0;
   }
 }
-.local-data h2 {
+.local-data .local-data-evento {
+  max-width: 80%;
+  margin: auto;
+}
+.local-data .local-data-evento h2 {
   width: 200px;
   margin: 1.2rem;
   border-radius: 5px;
 }
 @media (max-width: 700px) {
-  .local-data h2 {
+  .local-data .local-data-evento h2 {
     font-size: 1rem;
   }
 }
@@ -707,8 +720,8 @@ li {
   }
 }
 .local-data .local .local-foto img {
-  width: 500px;
-  height: 450px;
+  width: 35vw;
+  height: 70vh;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -752,7 +765,7 @@ li {
 }
 .local-data .local .local-data-container-1 p {
   width: 70%;
-  font-size: 1.3rem;
+  font-size: 1rem;
   text-align: justify;
   margin: 1rem;
   color: #000;
@@ -858,7 +871,8 @@ footer #seds-card {
 }
 footer .footer-container {
   max-width: 1200px;
-  margin: 10px;
+  margin: auto;
+  padding-top: 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
