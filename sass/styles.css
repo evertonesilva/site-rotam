@@ -29,7 +29,6 @@ li {
   height: 100dvh;
   background-size: 100% 100%;
   background-position: center;
-  max-height: 600px;
 }
 @media (max-width: 700px) {
   #main-banner {
@@ -140,7 +139,7 @@ li {
   overflow: hidden;
   gap: 25px;
   position: relative;
-  width: 400px;
+  width: 40vw;
   height: 100vh;
   left: 50%;
   bottom: 0;
@@ -161,8 +160,8 @@ li {
   cursor: grab;
 }
 #main-banner .carrosel .slide img {
-  width: 400px;
-  height: 300px;
+  width: 40vw;
+  height: 60vh;
 }
 @media (max-width: 700px) {
   #main-banner .carrosel .slide img {
