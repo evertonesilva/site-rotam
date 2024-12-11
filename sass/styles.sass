@@ -5,12 +5,12 @@
 #main-banner
     background: url('../img/1.jpg')
     height: 100dvh
-    min-height: 752px
     background-size: 100% 100%
     background-position: center
     max-height: 600px
     @include mobile
         max-height: 100dvh
+        min-height: 752px
         background: url('../img/1-2.jpg')
         background-size: 100% 100%
         background-position: center 
@@ -77,6 +77,7 @@
         #menu_mobile
             overflow: hidden
             position: fixed
+            background: rgba(255,255,255, 0.5 )
             top: 10px
             right: 0
             height: 100px
@@ -142,8 +143,8 @@
 
     .card-inscricao
         position: absolute
-        left: 60px
-        bottom: 50px
+        left: 75px
+        bottom: 70px
         width: 50px
         height: 15px
         span
@@ -179,14 +180,14 @@
 .objetivo-container
     height: 100dvh
     width: 100vw
-    min-height: 752px
     position: absolute
     top: 0
     left: 0
     display: flex
     background-color: rgba(255,255,255, 0.6 )
     @include mobile
-        width: 99.5vw 
+        width: 99.9vw 
+        min-height: 752px
         flex-direction: column
         align-items: center
         padding: 0
@@ -234,7 +235,7 @@
             margin-top: 5rem
         @include mobile
             img
-                margin-top: 0
+                margin-top: 2rem
                 width: 200px
                 height: 250px
 
@@ -243,16 +244,18 @@
 //página de Atividades
 .atividade
     height: 100dvh
-    min-height: 752px
     position: absolute
     top: 0
     left: 0
     background: rgba(255,255,255,0.6 )
+    @include mobile
+        min-height: 752px
+
     .atividade-texto
         text-align: left
         padding-top: 4rem
         padding-left: 2rem
-        margin-top: -4rem
+        margin-top: -5rem
         @include mobile
             display: flex
             justify-content: center
@@ -374,7 +377,6 @@
 .acao-social
     position: absolute
     height: 100dvh
-    min-height: 752px
     top: 0
     left: 0
     background: rgba(255,255,255,0.5)
@@ -382,6 +384,7 @@
     flex-direction: row
     @include mobile
         flex-direction: column
+        min-height: 752px
      
 
     .acao-social-texto
@@ -395,7 +398,7 @@
             margin-top: 6.5rem
             @include mobile
                 margin: 1rem auto
-                margin-top: 3rem
+                margin-top: 4rem
 
         p
             width: 80%
@@ -406,7 +409,7 @@
                 width: 90% 
                 font-size: 0.9rem
                 margin: 0 auto
-                margin-bottom: 0
+                padding-bottom: -5rem
 
     .acao-social-video
         flex: 1
@@ -414,7 +417,7 @@
         padding-left: 7rem
         @include mobile
             padding-left: 0
-            margin-top: -4rem
+            margin-top: -7rem
 
 
 //fim Ação Social
@@ -422,7 +425,6 @@
 .services-container
     background: linear-gradient(rgba(0,0,0,0.8 ), rgba(0,0,0,0.8)), url('../img/eagle.jpg')
     height: 100dvh
-    min-height: 812px
     background-size: 100% 100%
     background-attachment: fixed
     text-align: left
@@ -431,6 +433,7 @@
     z-index: 99
     @include mobile
         max-height: 100dvh
+        min-height: 812px
         background: linear-gradient(rgba(0,0,0,0.8 ), rgba(0,0,0,0.8)), url('../img/eagle-2.png')
         background-attachment: fixed
         background-position: center
@@ -464,26 +467,26 @@
             padding: 0
     
     .sobre-evento
-        background: url(../img/sobre-evento.png)
-        width: 20vw
-        height: 80vh
-        background-size: contain
-        background-repeat: no-repeat
-        margin-top: 2rem
-        @include mobile
-            background-size: cover
-            width: 60vw
-            height: 40vh
-            margin-bottom: 2rem
+        img
+            width: 300px
+            height: 375px
+            background-size: contain
+            background-repeat: no-repeat
+            margin-top: 2rem
+            @include mobile
+                background-size: cover
+                width: 60vw
+                height: 40vh
+                margin-bottom: 2rem
 
     .services-card
         width: 60%
         height: 70vh
         margin: 1%
         padding: 3rem
-        margin-top: -5rem
+        margin-top: 0
         @include mobile
-            margin-top: 5rem
+            margin-top: 0
             width: 90%
             padding: 0
             display: flex
@@ -521,7 +524,6 @@
             
 .demonstracao
     height: 100vh
-    min-height: 652px
     background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6 )), url(../img/1.jpg)
     background-size: 100% 100%
     background-repeat: no-repeat
@@ -532,6 +534,7 @@
     justify-content: center
     margin: 0 auto
     @include mobile
+        min-height: 652px
         height: 100dvh
         background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6 )), url(../img/1-2.jpg)
         background-size: 100% 100%
@@ -539,7 +542,6 @@
 
 
 .local-data
-    min-height: 652px
     background: linear-gradient(rgba(255,255,255,0.75 ), rgba(255, 255, 255, 0.75)), url('../img/acude-velho.jpg')
     background-attachment: fixed
     background-size: cover
@@ -547,6 +549,7 @@
     max-height: 600px
     @include mobile
         max-height: 100dvh
+        min-height: 700px
         background-size: cover
         display: flex
         flex-direction: column
@@ -575,15 +578,15 @@
             width: 100%
 
         .local-foto
-            background: url(../img/local-foto.png)
-            width: 65vw
-            height: 70vh
-            background-size: contain
-            background-repeat: no-repeat
-            @include mobile
-                background-size: cover
-                width: 50vw
-                height: 35vh
+            img
+                width: 500px
+                height: 450px
+                background-size: contain
+                background-repeat: no-repeat
+                @include mobile
+                    background-size: cover
+                    width: 200px
+                    height: 180px
 
 
         .local-data-container
