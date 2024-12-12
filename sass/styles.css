@@ -535,9 +535,7 @@ li {
 }
 @media (max-width: 700px) {
   .services-container {
-    height: 900px;
-    max-height: 100dvh;
-    min-height: 812px;
+    height: 750px;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/eagle-2.png");
     background-attachment: fixed;
     background-position: center;
@@ -553,6 +551,11 @@ li {
   margin: auto;
   padding-top: 2rem;
 }
+@media (max-width: 700px) {
+  .services-container .services {
+    padding-top: 0;
+  }
+}
 .services-container .services h2 {
   width: 250px;
   border-radius: 5px;
@@ -560,8 +563,8 @@ li {
 }
 @media (max-width: 700px) {
   .services-container .services h2 {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: -1rem;
   }
 }
 .services-container .services .services-card-container {
@@ -574,8 +577,6 @@ li {
   .services-container .services .services-card-container {
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: 100%;
     padding: 0;
   }
 }
@@ -595,7 +596,7 @@ li {
   }
 }
 .services-container .services-card {
-  width: 75%;
+  width: 90%;
   height: 70vh;
   margin-left: 3rem;
   padding: 3rem;
@@ -603,9 +604,11 @@ li {
 }
 @media (max-width: 700px) {
   .services-container .services-card {
-    margin-top: 0;
-    width: 90%;
+    margin-top: -1rem;
+    width: 90vw;
+    margin: 0 auto;
     padding: 0;
+    padding-right: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -702,6 +705,9 @@ li {
 }
 @media (max-width: 700px) {
   .local-data .local-data-evento h2 {
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     font-size: 1rem;
   }
 }
