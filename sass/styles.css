@@ -632,7 +632,7 @@ li {
   }
 }
 .services-container .services-card p {
-  width: 55vw;
+  width: 30vw;
   color: #FFF;
   font-size: 1rem;
   text-align: justify;
@@ -670,6 +670,10 @@ li {
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
+}
+.demonstracao video {
+  width: 29vw;
+  height: 89vh;
 }
 
 .local-data {
