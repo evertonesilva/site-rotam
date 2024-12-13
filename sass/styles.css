@@ -547,8 +547,8 @@ li {
   }
 }
 .services-container .services {
-  max-width: 75%;
-  margin: auto;
+  max-width: 85%;
+  margin: 0 auto;
   padding-top: 2rem;
 }
 @media (max-width: 700px) {
@@ -598,17 +598,16 @@ li {
 .services-container .services-card {
   width: 90%;
   height: 70vh;
+  margin-top: 0;
   margin-left: 3rem;
   padding: 3rem;
-  margin-top: 0;
 }
 @media (max-width: 700px) {
   .services-container .services-card {
     margin-top: -1rem;
-    width: 90vw;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
-    padding-right: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -632,9 +631,9 @@ li {
   }
 }
 .services-container .services-card p {
-  width: 30vw;
+  width: 50vw;
   color: #FFF;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: justify;
   font-weight: bold;
   padding-top: 2rem;
@@ -674,6 +673,12 @@ li {
 .demonstracao video {
   width: 29vw;
   height: 89vh;
+}
+@media (max-width: 700px) {
+  .demonstracao video {
+    width: 298px;
+    height: 450px;
+  }
 }
 
 .local-data {

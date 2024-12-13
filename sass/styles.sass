@@ -442,8 +442,8 @@
         padding: 0
 
     .services
-        max-width: 75%
-        margin: auto
+        max-width: 85%
+        margin: 0 auto
         padding-top: 2rem
         @include mobile
             padding-top: 0
@@ -483,15 +483,14 @@
     .services-card
         width: 90%
         height: 70vh
+        margin-top: 0
         margin-left: 3rem
         padding: 3rem
-        margin-top: 0
         @include mobile
             margin-top: -1rem
-            width: 90vw
+            width: 100%
             margin: 0 auto
             padding: 0
-            padding-right: 2rem
             display: flex
             flex-direction: column
             align-items: center
@@ -513,9 +512,9 @@
                 margin-bottom: 0
 
         p
-            width: 30vw
+            width:50vw
             color: $light-color
-            font-size: 1rem
+            font-size: 1.5rem
             text-align: justify
             font-weight: bold
             padding-top: 2rem
@@ -548,6 +547,9 @@
     video
         width: 29vw
         height: 89vh
+        @include mobile
+            width: 298px
+            height: 450px
 
 
 .local-data
