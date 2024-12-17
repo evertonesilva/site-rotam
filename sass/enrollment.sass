@@ -2,7 +2,112 @@
 @import '_utilities'
 @include reset
 
-header
+#main-banner
+    background: linear-gradient(rgba(255,255,255,0.3 ), rgba(255, 255, 255, 0.3)), url('../img/1.jpg')
+    height: 950px
+    width: 100dvw
+    background-size: 100% 100%
+    background-position: center
+    @include mobile
+        height: 100dvh
+        min-height: 620px
+        background: linear-gradient(rgba(255,255,255,0.3 ), rgba(255, 255, 255, 0.3)), url('../img/1-2.jpg')
+        background-size: 100% 100%
+        background-position: center 
+        
+    nav
+         @include mobile
+            width: 100%
+
+    .nav-container
+        display: flex
+        height: 60%
+        align-items: flex-start
+        justify-content: center
+        position: fixed
+        top: 20px
+        right: 10px
+        z-index: 10
+        @include mobile
+            
+
+    .nav-container-navbar
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+
+        li
+            display: flex
+            align-items: flex-start
+            width: 150px
+
+
+            a
+                width: 100%
+                background: rgba(255,255,255, 0.6 )
+                color: $dark-color
+                font-size: 0.8rem
+                text-align: center
+                font-weight: bold
+                padding: 10px 20px
+                text-transform: uppercase
+                transition: 0.3s ease              
+                &:hover
+                    color: $black
+                    border-bottom: 2px solid #fff
+                    background-color: rgba(255,255,255, 0.3 )
+            #home_menu
+                font-size: 1.2rem
+                margin-right: 10px
+        #acao-down
+            margin: 0
+            padding: 0
+            position: absolute
+            width: 15px
+            height: 25px
+            margin-left: 10px
+            margin-top: -5px
+
+    #menu_mobile, .nav_mobile
+        display: none
+    
+    @media screen and (max-width: 800px)
+        .nav-container, .nav-container-navbar, #acao-down
+            display: none
+        
+        #menu_mobile
+            overflow: hidden
+            position: fixed
+            background: rgba(255,255,255, 0.5 )
+            top: 10px
+            right: 0
+            height: 100px
+            display: flex
+            flex-direction: column
+            gap: 8px
+            width: 40px
+            z-index: 10
+
+            .nav_mobile
+                margin: 8px 8px
+                display: flex
+                flex-direction: column
+                transition: font-size .5s
+                a
+                    color: black
+                    &:hover
+                        color: red
+                    i
+                        &:hover
+                            font-size: 1.8rem
+
+                    img
+                        margin-top: 5px
+                        width: 20px
+                        height: 25px
 
     .enrollment
         position: relative
@@ -10,13 +115,12 @@ header
         display: flex
         align-items: center
         justify-content: center
-    
+        @include mobile
+            top: 15px
+
     .enrollment-content
         display: flex
-        flex-direction: column
-        @include mobile
-            width:150px
-            height: 150px
+        flex-direction: column            
 
 
     .enrollment-content h2
@@ -26,6 +130,7 @@ header
         margin-bottom: 14px
         @include mobile
             font-size: 1rem
+            margin-bottom: 0
     
     .enrollment-info
         display: flex
@@ -41,9 +146,9 @@ header
         gap: 16px
         padding: 0 44px 34px 44px
         @include mobile
-            margin-top: 2rem
-            width: 50vw
-            height: 200px
+            margin-top: 0.5rem
+            width: 200px
+            height: 150px
         
         a
             display: flex
@@ -58,70 +163,173 @@ header
                 margin-top: 2rem
                 width: 5vw
                 @include mobile
-                    width: 10vw
+                    width: 8vw
                     margin-top: 1rem
             p
                 text-align: center
                 font-size: 1.5rem
                 font-weight: bold
                 @include mobile
-                    font-size: 1rem
+                    width: 100%
+                    font-size: 0.8rem
 
     .enrollment-info:hover
         transform: scale(1.1)
+
     .link
         position: relative
-        top: 5rem
+        top: 2rem
 
-    .link-content h2
-        text-transform: uppercase
-        text-align: center
-        font-size: 2rem
-        margin-bottom: 14px
+        .link-content h2
+            text-transform: uppercase
+            text-align: center
+            font-size: 2rem
+            margin-bottom: 14px
+            @include mobile
+                font-size: 1rem
+                margin-bottom: 7px
 
 
     .links
         display: flex
-        grid-column: span
         justify-content: center
         align-items: center
-        gap: 16px
-        padding: 0 44px 34px 44px
 
-    .links-info
-        width: 15vw
-        flex: 1
-        display: flex
-        flex-direction: column
-        background-color: white
-        border-radius: 8px
-        box-shadow: 0px -1px 17px -4px rgb(0,0,0, 0.45)
-        overflow: hidden
+        .links-info
+            width: 350px
+            height: 250px
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            margin: 1rem
+            background: rgba(255,255,255, 0.4 )
+            border-radius: 8px
+            box-shadow: 0px -1px 17px -4px rgb(0,0,0, 0.45)
+            overflow: hidden
+            transition: transform 0.5s
+            @include mobile
+                width: 200px
+                height: 150px
+                flex: 1
 
-        img
-            width: 20vw
-            max-width: 150px
-            transition: transform 0.1s
 
+            a
+                text-align: center
 
-        .links-info img:hover
-            transform: scale(1.2)
+                img
+                    width: 10vw
+
+                p
+                    text-decoration: none
+                    color: black
+                    font-size: 1.3rem
+                    font-weight: bold
+                    @include mobile
+                        font-size: 0.7rem
+                    
+        .links-info:hover
+            transform: scale(1.1)
             z-index: 1
 
 
-        .haircut-info
-            width: 100%
+
+
+
+@keyframes slides
+    0%
+        transform: translateX(0)
+    100%
+        transform: translateX(-100%)
+
+footer
+    background-color: $footer-bg
+    color: $text-color
+    padding: 3rem 2rem
+    z-index: 1
+
+    .wrap
+        display: flex
+        flex-direction: column
+        border-bottom: 1px solid white
+        @include mobile
+            flex-direction: column
+
+        .patrocinadores
+            border-bottom: 1px solid white
+
+            .logos
+                overflow: hidden
+                padding: 60px 0
+                white-space: nowrap
+                
+                &:hover .logos-slide
+                    animation-play-state: paused
+
+                .logos-slide
+                    display: inline-block
+                    animation: 15s slides infinite  linear
+            
+                .logos-slide img
+                    height: 70px
+                    margin: 0 40px
+
+
+        .realizacao-card
             display: flex
-            justify-content: space-between
-            padding: 14px
-            background-color: white
-            z-index: 99
+            flex-direction: columns
+            justify-content: space-around
+            align-items: center
+            gap: 20px
+            padding: 2rem
+            @include mobile
+                flex-direction: column
 
+            img
+                width: 200px
+                
+    #seds-card
+        width: 100px
+        height: 40px
 
-        .haircut-info button
-            color: white
-            background-color: red
-            padding: 4px 8px
-            border-radius: 4px
-            border: 0
-            cursor: default
+    .footer-container
+        max-width: 1200px
+        margin: auto
+        padding-top: 2rem
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        @include mobile
+            max-width: 100%
+            justify-content: center
+            flex-direction: column
+            align-items: center
+
+        .footer-title
+            color: #FFF
+            font-weight: bold
+            margin-bottom: 1rem
+            @include mobile
+                text-align: center
+                width: 100%
+        
+        p
+            margin-top: 0.5rem
+            @include mobile
+                text-align: center
+
+    
+    .footer-image    
+        background: url(../img/footer.png)
+        width: 55px
+        height: 70px
+        background-size: contain
+        background-repeat: no-repeat
+        filter: grayscale(1.0)
+        transition: 0.4s 
+        @include mobile
+            margin-top: 2rem
+        
+        &:hover
+            transform: scale(1.2)
+            filter: grayscale(0)
