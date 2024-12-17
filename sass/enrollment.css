@@ -1,3 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "lato", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
 header .enrollment {
   position: relative;
   top: 25px;
@@ -8,14 +23,12 @@ header .enrollment {
 header .enrollment-content {
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 10px;
-  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
-  width: 25vw;
-  transition: transform 0.4s;
 }
-header .enrollment-content:hover {
-  transform: scale(1.1);
+@media (max-width: 700px) {
+  header .enrollment-content {
+    width: 150px;
+    height: 150px;
+  }
 }
 header .enrollment-content h2 {
   text-transform: uppercase;
@@ -23,14 +36,31 @@ header .enrollment-content h2 {
   font-size: 2rem;
   margin-bottom: 14px;
 }
+@media (max-width: 700px) {
+  header .enrollment-content h2 {
+    font-size: 1rem;
+  }
+}
 header .enrollment-info {
   display: flex;
   flex-direction: column;
   flex: 1;
   justify-content: center;
   align-items: center;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+  width: 25vw;
+  transition: transform 0.4s;
   gap: 16px;
   padding: 0 44px 34px 44px;
+}
+@media (max-width: 700px) {
+  header .enrollment-info {
+    margin-top: 2rem;
+    width: 50vw;
+    height: 200px;
+  }
 }
 header .enrollment-info a {
   display: flex;
@@ -42,16 +72,31 @@ header .enrollment-info a {
   cursor: pointer;
 }
 header .enrollment-info a img {
+  margin-top: 2rem;
   width: 5vw;
+}
+@media (max-width: 700px) {
+  header .enrollment-info a img {
+    width: 10vw;
+    margin-top: 1rem;
+  }
 }
 header .enrollment-info a p {
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
 }
+@media (max-width: 700px) {
+  header .enrollment-info a p {
+    font-size: 1rem;
+  }
+}
+header .enrollment-info:hover {
+  transform: scale(1.1);
+}
 header .link {
   position: relative;
-  top: 50px;
+  top: 5rem;
 }
 header .link-content h2 {
   text-transform: uppercase;

@@ -1,3 +1,7 @@
+@import '_variables'
+@import '_utilities'
+@include reset
+
 header
 
     .enrollment
@@ -10,22 +14,18 @@ header
     .enrollment-content
         display: flex
         flex-direction: column
-        background: rgba(255,255,255, 0.4 )
-        border-radius: 10px
-        box-shadow: 0px -1px 17px -4px rgb(0,0,0, 0.45)
-        width: 25vw
-        transition: transform 0.4s
         @include mobile
-            width: 200px
+            width:150px
+            height: 150px
 
-    .enrollment-content:hover
-            transform: scale(1.1)
 
     .enrollment-content h2
         text-transform: uppercase
         text-align: center
         font-size: 2rem
         margin-bottom: 14px
+        @include mobile
+            font-size: 1rem
     
     .enrollment-info
         display: flex
@@ -33,8 +33,18 @@ header
         flex: 1
         justify-content: center
         align-items: center
+        background: rgba(255,255,255, 0.4 )
+        border-radius: 10px
+        box-shadow: 0px -1px 17px -4px rgb(0,0,0, 0.45)
+        width: 25vw
+        transition: transform 0.4s
         gap: 16px
         padding: 0 44px 34px 44px
+        @include mobile
+            margin-top: 2rem
+            width: 50vw
+            height: 200px
+        
         a
             display: flex
             flex-direction: column
@@ -45,15 +55,23 @@ header
             cursor: pointer
             
             img
+                margin-top: 2rem
                 width: 5vw
+                @include mobile
+                    width: 10vw
+                    margin-top: 1rem
             p
                 text-align: center
                 font-size: 1.5rem
                 font-weight: bold
+                @include mobile
+                    font-size: 1rem
 
+    .enrollment-info:hover
+        transform: scale(1.1)
     .link
         position: relative
-        top: 50px
+        top: 5rem
 
     .link-content h2
         text-transform: uppercase
