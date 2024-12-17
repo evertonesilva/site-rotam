@@ -821,6 +821,14 @@ li {
   }
 }
 
+.enrollment-container {
+  display: flex;
+  flex-direction: column;
+}
+.enrollment-container .enrollment-container-link {
+  display: flex;
+}
+
 @keyframes slides {
   0% {
     transform: translateX(0);
