@@ -1,0 +1,109 @@
+header
+
+    .enrollment
+        position: relative
+        top: 25px
+        display: flex
+        align-items: center
+        justify-content: center
+    
+    .enrollment-content
+        display: flex
+        flex-direction: column
+        background: rgba(255,255,255, 0.4 )
+        border-radius: 10px
+        box-shadow: 0px -1px 17px -4px rgb(0,0,0, 0.45)
+        width: 25vw
+        transition: transform 0.4s
+        @include mobile
+            width: 200px
+
+    .enrollment-content:hover
+            transform: scale(1.1)
+
+    .enrollment-content h2
+        text-transform: uppercase
+        text-align: center
+        font-size: 2rem
+        margin-bottom: 14px
+    
+    .enrollment-info
+        display: flex
+        flex-direction: column
+        flex: 1
+        justify-content: center
+        align-items: center
+        gap: 16px
+        padding: 0 44px 34px 44px
+        a
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            text-decoration: none
+            color: black
+            cursor: pointer
+            
+            img
+                width: 5vw
+            p
+                text-align: center
+                font-size: 1.5rem
+                font-weight: bold
+
+    .link
+        position: relative
+        top: 50px
+
+    .link-content h2
+        text-transform: uppercase
+        text-align: center
+        font-size: 2rem
+        margin-bottom: 14px
+
+
+    .links
+        display: flex
+        grid-column: span
+        justify-content: center
+        align-items: center
+        gap: 16px
+        padding: 0 44px 34px 44px
+
+    .links-info
+        width: 15vw
+        flex: 1
+        display: flex
+        flex-direction: column
+        background-color: white
+        border-radius: 8px
+        box-shadow: 0px -1px 17px -4px rgb(0,0,0, 0.45)
+        overflow: hidden
+
+        img
+            width: 20vw
+            max-width: 150px
+            transition: transform 0.1s
+
+
+        .links-info img:hover
+            transform: scale(1.2)
+            z-index: 1
+
+
+        .haircut-info
+            width: 100%
+            display: flex
+            justify-content: space-between
+            padding: 14px
+            background-color: white
+            z-index: 99
+
+
+        .haircut-info button
+            color: white
+            background-color: red
+            padding: 4px 8px
+            border-radius: 4px
+            border: 0
+            cursor: default
