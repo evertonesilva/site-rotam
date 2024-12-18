@@ -3,7 +3,7 @@
 @include reset
 
 #main-banner
-    background: linear-gradient(rgba(255,255,255,0.3 ), rgba(255, 255, 255, 0.3)), url('../img/1.jpg')
+    background:  linear-gradient(rgba(255,255,255,0.6 ), rgba(255, 255, 255, 0.6)), url('../img/1.jpg')
     height: 950px
     width: 100dvw
     background-size: 100% 100%
@@ -11,7 +11,7 @@
     @include mobile
         height: 100dvh
         min-height: 620px
-        background: linear-gradient(rgba(255,255,255,0.3 ), rgba(255, 255, 255, 0.3)), url('../img/1-2.jpg')
+        background: linear-gradient(rgba(255,255,255,0.6 ), rgba(255, 255, 255, 0.6)), url('../img/1-2.jpg')
         background-size: 100% 100%
         background-position: center 
         
@@ -189,6 +189,11 @@
                 font-size: 1rem
                 margin-bottom: 7px
 
+        p
+            width: 96%
+            text-align: center
+            font-weight: bold
+            color: $dark-color
 
     .links
         display: flex
